@@ -54,3 +54,116 @@ To process a test stripe payment, please use the following details.
     4. Delete a product.
        
 ---
+
+## Features
+### Home Page
+- [Home Page](static/images/screenshots/home-page.png)
+* General
+  - The Hero image covers the home page completely except for the Navigation section at the top of the page. The image draws the user in and invites the user into the site with a beautiful picture of the great outdoors.
+  - The site Logo appears on the top left of the page within the navbar.
+* Navigation
+  - The Navbar appears on all pages throughout the site. The site logo appears on the left and is read by the user first, reading left to right, top to bottom. 
+  - Navigation links are also displayed for each product category with drop-down menus displaying all the available subcategories. 
+Categories and sub-categories
+  * All Products
+     - By Price
+     - By Category
+     - By Rating
+     - All Products
+  * Clothing
+     - Jackets
+     - Tops
+     - Trousers
+     - All clothing
+  * Footwear
+     - Shoes
+     - Boots
+     - Sandals
+     - Accessories
+     - All Footwear
+  * Equipment
+     - Hiking
+     - Climbing
+     - Cycling
+     - Swimming
+     - Camping
+     - Skiing
+     - All Equipment
+  * Sale
+     - New offers
+     - Clearance
+     - All Sale items
+
+* Search feature
+  - The search bar is centred at the top of the page allowing the user to search for products by entering a keyword.
+* Main Site Icons
+  - Fontawesome icons are shown at the top of the page representing ‘My Account’, ‘Wishlist’ and the Shopping Cart. There is a further drop-down option under ‘My Account’ for ‘Sign In’ and ‘Register’.
+ * Shop Now button
+  - This button is presented on the main page and takes the user directly into the ‘All Products’ section.
+### Products Page
+- [Products Page](static/images/screenshots/products-page.png)
+* The Products page displays relevant products displayed on individual cards. The number of products is displayed in the top left of the section with a link to the home page next to this.
+* Products can be sorted by Price, Rating, Name and Category with a drop-down selector on the right side of the page. 
+* Admin also have access to two further buttons to delete or update a product.
+### Product Details Page
+- [Product Details Page](static/images/screenshots/product-details.png)
+* Features the product image on the left.
+* Product details displayed on right side of image, including product name, description, price, category and rating.
+* When user signed in, a white heart icon is displayed on bottom right of image that enables signed add product to their wishlist. The heart icon changes to green once selected, it can be removed by selected once again.
+* Quantity selector allows user to select required number of products.
+* Add to Cart button adds product to users shopping cart, shopping cart icon at top of page is updated with the relevant amount. 
+
+  * Feedback provided to shopper via a popup from Bootstrap toasts, informing the user that item has been added with a link to the shopping cart page.
+- [Shopping Cart Success](static/images/screenshots/shopping-cart.png)
+* Admin also have access to two further buttons to delete or update a product.
+* Reviews - Any product reviews are listed underneath the product card. A signed in user has the option to edit or delete any reviews they have added. 
+  - Edit – User is taken to the Edit Review form and asked to confirm any changes.
+   - Delete – Once selected, a Delete confirmation modal is displayed to safeguard against accidental deletion.
+  - If the user has not added a review yet, the Add Review button is displayed and the user is taken to the Add Review Form.
+* Add/Edit Review Page 
+- [Add Review Form](static/images/screenshots/add-review-form.png)
+- [Edit Review Form](static/images/screenshots/edit-review-form.png)
+
+### Wishlist
+- [Wishlist Page](static/images/screenshots/wishlist-page.png)
+* Displays all products added to users wishlist. Products are displayed in the same format as the main products page with the same functionality. 
+* Each product in the wishlist also has a quantity selector and an add to cart button enabling the user to easily add their wishlist items to the shopping cart.
+* Once heart icon selected feedback provided to shopper via a popup from Bootstrap toasts, informing the user that item has been added to their wishlist.
+* A remove link is shown at the bottom of the product card so that a product can be easily removed from their wishlist.
+
+* Shopping Cart Success Pop up
+- [Shopping Cart Success](static/images/screenshots/shopping-cart-success.png)
+
+### Shopping Cart
+- [Shopping Cart Page](static/images/screenshots/shopping-cart-page.png)
+  - Each product selected by the shopper is listed along with an image, Name of product, size (if applicable), SKU code and price.
+  - The shopper can adjust the quantity of an individual product in the cart or remove it completely.
+  - At the bottom of the listed products in the cart is a Cart Total, Delivery Charge (if applicable) and Grand total.
+  - The shopper is given two option buttons under the grand total, to Keep Shopping or go to the Secure Checkout.
+
+### Checkout Page
+- [Checkout Page](static/images/screenshots/checkout-page.png)
+  - Shipping and payment information form shown on the left
+  - Allows user to save information if signed in. If not signed in, Create an account or Sign in to save this information message is presented with the appropriate link.
+- [Order Success](static/images/screenshots/order-success.png)
+  - Once order submitted success message displayed with order summary, email order confirmation also sent to user’s email address
+  - On the left of the page products in the cart are listed, providing a product image, product name, size (if applicable), quantity and price. 
+  - Under the listed products is an Order Total, Delivery Charge (if applicable) and Grand total.
+### Admin Product Management
+- [Add Product Form](static/images/screenshots/add-product-form.png)
+  - Add product form displayed to add a new item to the store
+- [Edit Product Form](static/images/screenshots/edit-product-form.png)
+  - Admin can also edit and delete existing products, every product displays edit/delete at bottom of item summary. Delete confirmation is also displayed to safeguard against accidental deletion
+- [Delete Confirmation](static/images/screenshots/delete-confirmation.png)
+
+### Allauth features
+The sign in, register, password reset, email confirmation pages etc, have all been provided by Django allauth and formatted to meet the needs of the site.
+
+---
+
+### Future features
+* Adding stock management for the products.
+* Add more payment options, Paypal, Apple Pay etc.
+* Allow the site to recommend products to the shopper based on their order history.
+
+---
