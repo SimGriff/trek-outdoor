@@ -197,3 +197,26 @@ The Database Schema below was produced using [Lucidchart]( https://www.lucidchar
   - Holds reviews added for a specified product. Displays username that left the review along with time/date.
 
 ---
+
+## Design
+### Colour Scheme
+I used [Coolors](https://coolors.co/) to generate a colour scheme from my chosen hero image. I selected two colours from the palette that complement each other. The colours represent the earthly natural colours of the great outdoors. The Colour palette includes Light Blue #B9DEED background on the home page with overlayed text in Charleston Green #142126, this  ensure excellent readability. The Charleston Green #142126 text was used throughout the site and stood out well against the white background.
+![palette used for Project 4](static/images/screenshots/palette.png)
+
+---
+
+### Typography
+I used [Google Fonts](https://fonts.google.com/) to import the fonts used for this site. 
+I chose the __ Cabin __ font as it is a very clear and legible typeface. I felt that this font gave off a friendly vibe and worked well with my e-commerce site.
+
+---
+
+### Imagery
+The main hero image on the landing page is taken from pixabay [pixabay.com]( https://pixabay.com/) with a Free to use license. The eye catching outdoor image draws the user in and helps convey the purpose of the e-commerce site.
+The mountains logo from [Font Awesome](https://fontawesome.com/) was used to give the site name more of a visual impact. Fontawesome icons were also used throughout the site, the icons help inform the user of the purpose of a particular section and lead to a more enjoyable user experience. 
+Include screenshots of logo and 
+![logo-screenshot](static/images/screenshots/logo-screenshot.png)
+![main-icons-screenshot](static/images/screenshots/main-icons-screenshot.png)
+All product images have been downloaded from [sportpersuit.com](https://www.sportpursuit.com/) e-commerce store.
+
+---
