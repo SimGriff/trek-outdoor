@@ -167,3 +167,33 @@ The sign in, register, password reset, email confirmation pages etc, have all be
 * Allow the site to recommend products to the shopper based on their order history.
 
 ---
+## Database Design
+### Database Schema
+The Database Schema below was produced using [Lucidchart]( https://www.lucidchart.com/)
+![database schema](static/images/screenshots/database-schema.png)
+### Models
+* User model
+  - Created with django allauth and contains the customer username, email and password.
+* User Profile model
+  - Holds users default delivery information and order history.
+* Category model
+  - Holds all main category names for a product.
+* Subcategory model
+  - Holds subcategory names for a product.
+* Products model
+  - Holds detailed information for each individual product.
+* Wishlist model
+  - Signed in user can select any items they wish to place into a wishlist. 
+  - Items can be easily removed from the wishlist.
+  - Items can be added to the shopping cart directly from the wishlist
+* Order model
+  - Holds all information relating to a customer’s completed order.
+  - Allows the user to view their previous orders.
+* OrderLineItem model
+  - Holds information of an individual product that has been purchased.
+
+
+* Review model
+  - Holds reviews added for a specified product. Displays username that left the review along with time/date.
+
+---
