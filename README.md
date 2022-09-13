@@ -220,3 +220,34 @@ Include screenshots of logo and
 All product images have been downloaded from [sportpersuit.com](https://www.sportpursuit.com/) e-commerce store.
 
 ---
+
+## Wireframes
+
+The wireframes for the Bookworm site were produced using Balsamiq. 
+* Mobile Wireframes:
+  - [Home](static/images/wireframes/home-mobile.png)
+  - [Products](static/images/wireframes/products-mobile.png)
+  - [Product Details](static/images/wireframes/product-details-mobile.png)
+  - [Add Review](static/images/wireframes/add-review-mobile.png)
+  - [Wishlist](static/images/wireframes/wishlist-mobile.png)
+  - [Shopping Cart](static/images/wireframes/shopping-cart-mobile.png)
+  - [Checkout](static/images/wireframes/checkout-mobile.png)
+  - [My Account](static/images/wireframes/my-account-mobile.png)
+  - [Sign In](static/images/wireframes/sign-in-mobile.png)
+  - [Register](static/images/wireframes/register-mobile.png)
+  - [Add Products](static/images/wireframes/add-products-mobile.png)
+  
+* Desktop Wireframes:
+  - [Home](static/images/wireframes/home-desktop.png)
+  - [Products](static/images/wireframes/products-desktop.png)
+  - [Product Details](static/images/wireframes/product-details-desktop.png)
+  - [Add Review](static/images/wireframes/add-review-desktop.png)
+  - [Wishlist](static/images/wireframes/wishlist-desktop.png)
+  - [Shopping Cart](static/images/wireframes/shopping-cart-desktop.png)
+  - [Checkout](static/images/wireframes/checkout-desktop.png)
+  - [My Account](static/images/wireframes/my-account-desktop.png)
+  - [Sign In](static/images/wireframes/sign-in-desktop.png)
+  - [Register](static/images/wireframes/register-desktop.png)
+  - [Add Products](static/images/wireframes/add-products-desktop.png)
+
+---
