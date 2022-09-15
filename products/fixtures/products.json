@@ -1,0 +1,315 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00001",
+        "name": "Mens Waterproof Down Parka Jacket",
+        "category": 1,
+        "description": "The Highland men's DLX waterproof parka coat is breathable with a rating of 5,000mvp, so sweat will be wicked away to leave you feeling comfortable and fresh and, if needed, you can use the front full length zip for ventilation. The windproof and waterproof, up to 10,000mm, coating ensures you can keep warm and dry in extreme weather.",
+        "price": 159.99,
+        "rating": 4.6,
+        "image": "1.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00002",
+        "name": "Quick Dry Long Sleeve Active Top",
+        "category": 2,
+        "description": "1/2 Zip Neck, long sleeve, brushed back, contrast zip and inner back neck binding with reflective printed logo and trims",
+        "price": 24.99,
+        "rating": 4.1,
+        "image": "2.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00003",
+        "name": "Womens Cargo Trousers",
+        "category": 3,
+        "description": "Stay cool and comfortable in the Footfall women's walking trousers. The roll up trousers are super adjustable to suit long days and offers UV protection for those summer hikes.",
+        "price": 19.20,
+        "rating": 4.9,
+        "image": "3.jpg"
+      }
+    },
+  {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00004",
+        "name": "Mens DLX Mens Trainers",
+        "category": 4,
+        "description": "A minimalist all-black aesthetic is a great addition to your winter wardrobe. Pair with leggings for when youre working out or black or blue jeans for a casual every day look.",
+        "price": 99.99,
+        "rating": 3.5,
+        "image": "4.jpg"
+      }
+    },
+  {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00005",
+        "name": "Mens Waterproof Walking Boots",
+        "category": 5,
+        "description": "Black and yellow - that's the Finley way. These walking boots are essential for your upcoming hike adventures. The breathable waterproof boots are cushioned to support your ankles and equipped to keep your feet as dry as a bone.",
+        "price": 43.99,
+        "rating": 3.5,
+        "image": "5.jpg"
+      }
+    },
+  {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00006",
+        "name": "Waterproof LED Laces",
+        "category": 6,
+        "description": "Look flash and feel safe with Glo Laces. These cleverly designed shoelaces have inbuilt LED lights with up to 80 hours of battery life and 4 fast to slow settings. Great for increased visibility at night whilst exercising or simply ensuring no one misses your best dance moves.",
+        "price": 2.40,
+        "rating": 5,
+        "image": "6.jpg"
+      }
+    },
+  {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00007",
+        "name": "Lightweight Trekking Pole",
+        "category": 7,
+        "description": "3-Section Technical Walking Pole with Lightweight Aluminium Shaft and Qiklock Quick-Release Locking System. Adjustable Padded Wrist Strap",
+        "price": 20.99,
+        "rating": 4,
+        "image": "7.jpg"
+      }
+    },
+  {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00008",
+        "name": "Survival Bag",
+        "category": 8,
+        "description": "Should the worst happen when outdoors hiking, climbing, camping or any other outdoor activities, the Radiator survival bivi bag is excellent to have on hand in emergency situations.",
+        "price": 5.99,
+        "rating": 4.5,
+        "image": "8.jpg"
+      }
+    },
+  {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00009",
+        "name": "4 Man waterproof tent",
+        "category": 9,
+        "description": "The Ghabhar double skin tent is a waterproof haven for 4 people. Waterproof up to 1500mm with taped seams and a small porch for your wellies, this tent is a no-brainer for wild camping trips.",
+        "price": 59.99,
+        "rating": 4.8,
+        "image": "9.jpg"
+      }
+    },
+  {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000010",
+        "name": "Adult Ski Helmet",
+        "category": 10,
+        "description": "Gear up for ski season this winter with the Furillo adults’ ski helmet for ultimate protection. Featuring a shock absorbent core and high-impact shell, this helmet will keep you safe even if you tumble – and help you stand out brightly too.",
+        "price": 79.99,
+        "rating": 5,
+        "image": "10.jpg"
+      }
+    },
+  {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000011",
+        "name": "Kids patterned bobble hat",
+        "category": 11,
+        "description": "Gear up for ski season this winter with the Furillo adults’ ski helmet for ultimate protection. Featuring a shock absorbent core and high-impact shell, this helmet will keep you safe even if you tumble – and help you stand out brightly too.",
+        "price": 3.99,
+        "rating": 5,
+        "image": "11.jpg"
+      }
+    },
+  {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000012",
+        "name": "Kids novelty backpack",
+        "category": 12,
+        "description": "The splash-proof design makes this kids backpack ideal for taking to the swimming pool or other water-side activities. Adjustable Padded Shoulder Straps and Back offering added comfort and support, with adjustable features helping you find the perfect fit.",
+        "price": 4.00,
+        "rating": 3.7,
+        "image": "12.jpg"
+      }
+    },
+  {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000013",
+        "name": "Womens Waterproof Ski Jacket",
+        "category": 1,
+        "description": "Natasha women's ski jackets are designed for life in extremes, expertly woven from stretch fabric and padded with down-touch filling. They feature a zip-off hood, long sleeves with inner stretch cuffs, a ski pass pocket, underarm ventilation zips, a detachable snow skirt, a goggle pocket and water-repellent zips at both the fastening and the 2 lower pockets.",
+        "price": 64.00,
+        "rating": 4.9,
+        "image": "13.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000014",
+        "name": "Womens Casual Hoodie",
+        "category": 2,
+        "description":"Textured Knitted Fabric, Marl Jersey Lining in Hood with Cord Ties at Hood and Side Hem Splits",
+        "price": 34.99,
+        "rating": 4.8,
+        "image": "14.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000015",
+        "name": "Mens thermal Cargo Trousers",
+        "category": 3,
+        "description": "The Tipner men's walking trousers are expertly woven from 100% breathable cotton and feature a flat waist with belt loops 2 side slip pockets 2 utility pockets at the legs 2 patch pockets at the rear and a small money pocket.",
+        "price": 12.80,
+        "rating": 2.8,
+        "image": "15.jpg"
+      }
+    },
+  {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000016",
+        "name": "Womens walking shoes",
+        "category": 4,
+        "description": "Nothing beats a nice stroll on a summer's day. The Scree women's walking shoes will set you up for the full day without worry as they are waterproof and designed to provide full support for your comfort.",
+        "price": 54.99,
+        "rating": 3.9,
+        "image": "16.jpg"
+      }
+    },
+  {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000017",
+        "name": "Womens waterproof, insulated winter boots",
+        "category": 5,
+        "description": " Waterproof and insulated winter boots with protective all-round mudguard  and synthetic fur trim.",
+        "price": 109.99,
+        "rating": 4.9,
+        "image": "17.jpg"
+      }
+    },
+  {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000018",
+        "name": "Anti-blister walking socks",
+        "category": 6,
+        "description": " Wave goodbye to blisters. The Hadley women's walking socks are the gateway to happy feet as they tackle blisters and keep you comfortable in your walking boots. Extremely soft and coming in a variety of colours, they're the magic your adventure needs.",
+        "price": 13.99,
+        "rating": 4.5,
+        "image": "18.jpg"
+      }
+    },
+  {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000019",
+        "name": "Waterproof Gaiters",
+        "category": 7,
+        "description": "An essential for any muddy hike. Our Nanuk unisex performance gaiters are designed with Tres-tex fabric ensuring they are waterproof up to 10,000mm to keep rain and mud away from your socks, feet and trousers while still letting your feet breathe.",
+        "price": 19.99,
+        "rating": 4.2,
+        "image": "19.jpg"
+      }
+    },
+  {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp00020",
+        "name": "Mountaineering Goggles",
+        "category": 8,
+        "description": "Try our Bigbury single lens googles for size - available in three cool contrasting colourways - wear them for complete protection. Your Bigbury experience remains to be seen.",
+        "price": 25.99,
+        "rating": 4.9,
+        "image": "20.jpg"
+      }
+    },
+  {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000021",
+        "name": "Cutlery Set",
+        "category": 9,
+        "description": "If you are a regular camper you'll know that carrying loose cutlery and other items can be a nuisance so we suggest the Chomp cutlery set to help streamline your rucksack. This interlocking knife fork and spoon set are easy to separate then re-fasten so your cutlery stays together in your pack.",
+        "price": 2.99,
+        "rating": 4.2,
+        "image": "21.jpg"
+      }
+    },
+  {
+      "pk": 22,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000022",
+        "name": "Womens Ski gloves",
+        "category": 10,
+        "description": "Don’t hit the slopes without gloves, rookie error. The Vizza II ski gloves are essential for ski season, providing maximum protection against the cold and ultimate comfort with a waterproof fabric shell. Now you can take on any slope.",
+        "price": 33.99,
+        "rating": 4.9,
+        "image": "22.jpg"
+      }
+    },
+  {
+      "pk": 23,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000023",
+        "name": "Kids printed T-Shirt",
+        "category": 11,
+        "description": "Gear up for ski season this winter with the Furillo adults ski helmet for ultimate protection. Featuring a shock absorbent core and high-impact shell, this helmet will keep you safe even if you tumble – and help you stand out brightly too.",
+        "price": 3.20,
+        "rating": 4.4,
+        "image": "23.jpg"
+      }
+    },
+  {
+      "pk": 24,
+      "model": "products.product",
+      "fields": {
+        "sku": "pp000024",
+        "name": "Womens Ski Jacker",
+        "category": 12,
+        "description": "Down Touch Filling, adjustable zip off hood with water repellent zippers",
+        "price": 64.00,
+        "rating": 2.7,
+        "image": "12.jpg"
+      }
+    } 
+]
+  

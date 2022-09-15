@@ -1,0 +1,99 @@
+[
+    {
+      "pk": 1,
+      "model": "products.category",
+      "fields": {
+      "name": "jackets_coats",
+      "friendly_name": "Jackets & Coats"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.category",
+      "fields": {
+        "name": "tops",
+        "friendly_name": "Tops"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.category",
+      "fields": {
+        "name": "trousers",
+        "friendly_name": "Trousers"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.category",
+      "fields": {
+        "name": "shoes",
+        "friendly_name": "Shoes"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.category",
+      "fields": {
+        "name": "boots",
+        "friendly_name": "Boots"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.category",
+      "fields": {
+        "name": "accessories",
+        "friendly_name": "Accessories"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.category",
+      "fields": {
+        "name": "hiking",
+        "friendly_name": "Hiking"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.category",
+      "fields": {
+        "name": "climbing",
+        "friendly_name": "Climbing"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.category",
+      "fields": {
+        "name": "skiing",
+        "friendly_name": "Skiing"
+      }
+    },
+  {
+      "pk": 10,
+      "model": "products.category",
+      "fields": {
+        "name": "skiing",
+        "friendly_name": "Skiing"
+      }
+    },
+  {
+      "pk": 11,
+      "model": "products.category",
+      "fields": {
+        "name": "new_offers",
+        "friendly_name": "New Offers"
+      }
+    },
+  {
+      "pk": 12,
+      "model": "products.category",
+      "fields": {
+        "name": "clearance",
+        "friendly_name": "Clearance"
+      }
+    }
+]
+  
