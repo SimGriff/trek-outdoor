@@ -29,10 +29,14 @@ body {
 
 .blue-background {
     background-color: #B9DEED;
-  }
+}
 
 .dark-background {
     background-color: #142126;
+}
+
+.bg-red {
+    background-color: red;
 }
 
 .text-shadow {
@@ -41,7 +45,7 @@ body {
 
 /* buttons */
 .shop-button {
-    background: #142126;
+    background: red;
     color: white;
     min-width: 230px;
 }
