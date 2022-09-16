@@ -2,6 +2,11 @@ from django.db import models
 
 
 class Category(models.Model):
+    """ categories model """
+    class Meta:
+        """ overrides addition of s for plural """
+        verbose_name_plural = 'Categories'
+
     name = models.CharField(max_length=254)
     friendly_name = models.CharField(max_length=254, null=True, blank=True)
 
@@ -9,10 +14,12 @@ class Category(models.Model):
         return self.name
 
     def get_friendly_name(self):
+        """ returns friendly name for category """
         return self.friendly_name
 
 
 class Product(models.Model):
+    """ product model """
     sku = models.CharField(max_length=254, null=True, blank=True)
     name = models.CharField(max_length=254)
     category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
