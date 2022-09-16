@@ -83,6 +83,9 @@ body {
     border: 1px solid #142126 !important;
 }
 
+.navbar {
+    padding: 0.5rem 0.5rem !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Larger container on extra large screens */
