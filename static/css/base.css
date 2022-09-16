@@ -6,7 +6,7 @@ body {
     background: url('/media/hiking-4369332_1920.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 160px);
-    color: #B9DEED;
+    color: #142126;
     font-family: 'Cabin';
 }
 
@@ -43,6 +43,16 @@ body {
     text-shadow: 2px 2px black !important;
 }
 
+.overlay {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: fixed;
+	background: white;
+	z-index: -1;
+}
+
 /* buttons */
 .shop-button {
     background: red;
@@ -69,7 +79,7 @@ body {
     color: #142126 !important;
 }
 
-.border-dark {
+.border-green {
     border: 1px solid #142126 !important;
 }
 
