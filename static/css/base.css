@@ -53,6 +53,11 @@ body {
 	z-index: -1;
 }
 
+a.category-badge > span.badge:hover {
+    background: #B9DEED !important;
+    color: #142126 !important;
+}
+
 /* buttons */
 .shop-button {
     background: red;
