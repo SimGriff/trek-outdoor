@@ -43,6 +43,10 @@ body {
     text-shadow: 2px 2px black !important;
 }
 
+.text-green {
+    color: #50542A;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
@@ -78,6 +82,18 @@ a.category-badge > span.badge:hover {
 .btn-dark:focus {
     background: #50542A;
     color: white;
+}
+
+.up-btn {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+.link-btn {
+    cursor: pointer;
 }
 
 .text-dark {
