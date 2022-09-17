@@ -17,10 +17,10 @@
                 Clothing
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Jackets & Coats</a>
-                <a href="" class="dropdown-item">Tops</a>
-                <a href="" class="dropdown-item">Trousers</a>
-                <a href="" class="dropdown-item">All Clothing</a>
+                <a href="{% url 'products' %}?category=jackets_coats" class="dropdown-item">Jackets & Coats</a>
+                <a href="{% url 'products' %}?category=tops" class="dropdown-item">Tops</a>
+                <a href="{% url 'products' %}?category=trousers" class="dropdown-item">Trousers</a>
+                <a href="{% url 'products' %}?category=jackets_coats,tops,trousers" class="dropdown-item">All Clothing</a>
             </div>
         </li>
 
@@ -29,10 +29,10 @@
                 Footwear
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="footwear-link">
-                <a href="" class="dropdown-item">Shoes</a>
-                <a href="" class="dropdown-item">Boots</a>
-                <a href="" class="dropdown-item">Accessories</a>
-                <a href="" class="dropdown-item">All Footwear</a>
+                <a href="{% url 'products' %}?category=shoes" class="dropdown-item">Shoes</a>
+                <a href="{% url 'products' %}?category=boots" class="dropdown-item">Boots</a>
+                <a href="{% url 'products' %}?category=accessories" class="dropdown-item">Accessories</a>
+                <a href="{% url 'products' %}?category=shoes,boots,accessories" class="dropdown-item">All Footwear</a>
             </div>
         </li>
 
@@ -41,11 +41,11 @@
                 Equipment
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="equipment-link">
-                <a href="" class="dropdown-item">Hiking</a>
-                <a href="" class="dropdown-item">Climbing</a>
-                <a href="" class="dropdown-item">Camping</a>
-                <a href="" class="dropdown-item">Skiing</a>
-                <a href="" class="dropdown-item">All Equipment</a>
+                <a href="{% url 'products' %}?category=hiking" class="dropdown-item">Hiking</a>
+                <a href="{% url 'products' %}?category=climbing" class="dropdown-item">Climbing</a>
+                <a href="{% url 'products' %}?category=camping" class="dropdown-item">Camping</a>
+                <a href="{% url 'products' %}?category=skiing" class="dropdown-item">Skiing</a>
+                <a href="{% url 'products' %}?category=hiking,climbing,camping,skiing" class="dropdown-item">All Equipment</a>
             </div>
         </li>
 
@@ -54,9 +54,9 @@
                 Sale
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sale-link">
-                <a href="" class="dropdown-item">New Offers</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Sale Items</a>
+                <a href="{% url 'products' %}?category=new_offers" class="dropdown-item">New Offers</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
+                <a href="{% url 'products' %}?category=new_offers,clearance" class="dropdown-item">All Sale Items</a>
             </div>
         </li>
     </ul>
