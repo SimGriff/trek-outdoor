@@ -74,6 +74,12 @@ a.category-badge > span.badge:hover {
     color: #B9DEED;
 }
 
+.btn-outline-green {
+    background: white;
+    color: #50542A !important; /* use important to override link colors for <a> elements */
+    border: 1px solid #50542A;
+}
+
 .shop-button:hover,
 .shop-button:active,
 .shop-button:focus,
