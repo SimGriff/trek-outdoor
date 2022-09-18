@@ -84,6 +84,13 @@ a.category-badge > span.badge:hover {
     border: 1px solid #50542A;
 }
 
+.btn-outline-green:hover,
+.btn-outline-green:active,
+.btn-outline-green:focus {
+    background: #50542A;
+    color: white !important;
+}
+
 .shop-button:hover,
 .shop-button:active,
 .shop-button:focus,
