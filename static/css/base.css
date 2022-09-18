@@ -47,6 +47,10 @@ body {
     color: #50542A;
 }
 
+.text-dark {
+    color: #142126;
+}
+
 .overlay {
 	height: 100%;
 	width: 100%;
