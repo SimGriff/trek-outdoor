@@ -126,6 +126,24 @@ a.category-badge > span.badge:hover {
 .navbar {
     padding: 0.5rem 0.5rem !important;
 }
+
+/* -------------------------------- Toasts */
+
+.message-container {
+    position: fixed;
+    top: 72px;
+    right: 15px;
+    z-index: 99999999999;
+}
+
+.custom-toast {
+    overflow: visible;
+}
+
+.toast-capper {
+    height: 2px;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Larger container on extra large screens */
