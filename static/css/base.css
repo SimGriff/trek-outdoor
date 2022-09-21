@@ -115,6 +115,10 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
 .text-dark {
     color: #142126 !important;
 }
