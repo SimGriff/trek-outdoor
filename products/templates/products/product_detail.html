@@ -93,7 +93,23 @@
                                     </div>
                                 </div>
                             </div>
-                            
+                            <!-- Wishlist -->
+                            <div class="col-1 col-sm-2 col-lg-4 pl-0 mt-5">
+                                <p class="text-right">
+                                    {% if request.user.is_authenticated %}
+                                        <span class="d-none d-lg-inline-block green">Add to Wishlist:</span>
+                                        <a class="" href="{% url 'add_to_wishlist' product.id %}">
+                                            <i class="fa-regular fa-star fa-lg"></i>
+                                        </a>
+                                    {% else %}
+                                        <span class="d-none d-lg-inline-block red">Remove from Wishlist:</span>
+                                        <a href="{% url 'remove_from_wishlist' product.id %}">
+                                            <i class="fa-regular fa-star fa-lg"></i>
+                                        </a>
+                                    {% endif %}
+                                </p>
+                            </div>
+
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-outline-green rounded-0 mt-5">
                                     <span class="icon">
