@@ -58,6 +58,10 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
+                                            <span class="d-none d-lg-inline-block green">Remove from Wishlist:</span>
+                                            <a class="btn btn-dark" href="{% url 'remove_from_wishlist' product.id %}">
+                                                <i class="fa-regular fa-star fa-lg"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>

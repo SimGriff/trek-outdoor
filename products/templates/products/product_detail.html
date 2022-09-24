@@ -93,14 +93,19 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Wishlist -->
+                            <!-- Wishlist Section-->
                             <div class="col-1 col-sm-2 col-lg-4 pl-0 mt-5">
                                 <p class="text-right">
-                                    {% if request.user.is_authenticated %}
-                                        <span class="d-none d-lg-inline-block green">Add to Wishlist:</span>
-                                        <a class="btn btn-dark" href="{% url 'add_to_wishlist' product.id %}">
-                                            <i class="fa-regular fa-star fa-lg"></i>
-                                        </a>
+                                    {% if product in wishlist.ptoducts %}
+                                    <span class="d-none d-lg-inline-block green">Remove from Wishlist:</span>
+                                    <a class="btn btn-dark" href="{% url 'remove_from_wishlist' product.id %}">
+                                        <i class="fa-regular fa-star fa-lg"></i>
+                                    </a>
+                                    {% else %}
+                                    <span class="d-none d-lg-inline-block green">Add to Wishlist:</span>
+                                    <a class="btn btn-dark" href="{% url 'add_to_wishlist' product.id %}">
+                                        <i class="fa-regular fa-star fa-lg"></i>
+                                    </a>
                                     {% endif %}
                                 </p>
                             </div>
