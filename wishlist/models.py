@@ -10,7 +10,7 @@ class Wishlist(models.Model):
     delivery information and order history
     """
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    product = models.ManyToManyField(Product, blank=True)
+    products = models.ManyToManyField(Product, blank=True)
 
     def __str__(self):
         return f'WishList ({self.user})'

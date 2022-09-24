@@ -98,12 +98,7 @@
                                 <p class="text-right">
                                     {% if request.user.is_authenticated %}
                                         <span class="d-none d-lg-inline-block green">Add to Wishlist:</span>
-                                        <a class="" href="{% url 'add_to_wishlist' product.id %}">
-                                            <i class="fa-regular fa-star fa-lg"></i>
-                                        </a>
-                                    {% else %}
-                                        <span class="d-none d-lg-inline-block red">Remove from Wishlist:</span>
-                                        <a href="{% url 'remove_from_wishlist' product.id %}">
+                                        <a class="btn btn-dark" href="{% url 'add_to_wishlist' product.id %}">
                                             <i class="fa-regular fa-star fa-lg"></i>
                                         </a>
                                     {% endif %}
