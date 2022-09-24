@@ -43,14 +43,16 @@
     </div>
 </li>
 <!-- Wishlist -->
+{% if request.user.is_authenticated %}
 <li class="list-inline-item">
-    <a class="nav-link text-dark d-block d-lg-none" href="">
+    <a class="nav-link text-dark d-block d-lg-none" href="{% url 'wishlist' %}">
         <div class="text-center">
             <div><i class="fa-solid fa-star fa-lg"></i></div>
             <!-- <p class="my-0">Wishlist</p> -->
         </div>
     </a>
 </li>
+{% endif %}
 <!-- Shopping Cart -->
 <li class="list-inline-item">
     <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-dark{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}">
