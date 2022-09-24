@@ -58,6 +58,7 @@
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
+                                            <!-- Remove from Wishlist button -->
                                             <span class="d-none d-lg-inline-block green">Remove from Wishlist:</span>
                                             <a class="btn btn-dark" href="{% url 'remove_from_wishlist' product.id %}">
                                                 <i class="fa-regular fa-star fa-lg"></i>
@@ -89,12 +90,11 @@
                             </div>
                         {% endif %}
 					{% empty %}
-						<p class="lead mb-5 green">You have no products in your Wishlist.</p>
+						<h4 class="text-center">You have no products in your Wishlist</h4>
                     {% endfor %}
                 </div>
             </div>
         </div>
-    </div>
     <div class="up-btn shadow-sm rounded-0 border border-black">
         <a class="link-btn d-flex h-100">
             <i class="fas fa-arrow-up text-green mx-auto my-auto"></i>
