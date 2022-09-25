@@ -108,24 +108,25 @@
                     </form>
                 </div>
                 <!-- Wishlist Section-->
-                {% for product in wishlist %}
                 <div class="col-12">
-                    <!-- Add/Remove from Wishlist buttons-->
+                <!-- Add/Remove from Wishlist buttons-->
+                {% if product in wishlist.products.all %}
                     <a href="{% url 'remove_from_wishlist' product.id %}" 
                         class="btn btn-danger rounded-0 mt-5">
                         <span class="icon">
                             <i class="fa-regular fa-star fa-sm"></i>
                         </span>
                         <span class="text-uppercase">Remove from Wishlist</span>
-                    </a>        
-                {% endfor %}
+                    </a>  
+                {% else %}     
                     <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-success rounded-0 mt-5">
                         <span class="text-uppercase">Add to wishlist</span>
                         <span class="icon">
                             <i class="fa-regular fa-star fa-sm"></i>
                         </span> 
-                    </a>
+                    </a>    
                 </div>
+                {% endif %}  
             </div>
         </div>    
     </div>
