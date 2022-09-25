@@ -53,15 +53,18 @@
                                             </p>
                                             {% endif %}
                                             <!-- Product rating -->
-                                            {% if product.rating %}
+                                            <!--{% if product.rating %}
                                                 <small class="text-muted"><i class="fa-regular fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
                                                 <small class="text-muted">No Rating</small>
                                             {% endif %}
                                             <!-- Remove from Wishlist button -->
-                                            <span class="d-none d-lg-inline-block green">Remove from Wishlist:</span>
-                                            <a class="btn btn-dark" href="{% url 'remove_from_wishlist' product.id %}">
-                                                <i class="fa-regular fa-star fa-lg"></i>
+                                            <a href="{% url 'remove_from_wishlist' product.id %}" 
+                                                class="btn btn-danger btn-small rounded-0 mt-5">
+                                                <span class="icon">
+                                                    <i class="fa-regular fa-star fa-sm"></i>
+                                                </span>
+                                                <span class="small">Remove from Wishlist</span>
                                             </a>
                                         </div>
                                     </div>
@@ -90,7 +93,15 @@
                             </div>
                         {% endif %}
 					{% empty %}
-						<h4 class="text-center">You have no products in your Wishlist</h4>
+                    <div class="col-12 d-none d-xl-block text-center mb-5">
+                        <h4 class="">You have no products in your Wishlist</h4>
+                        <a href="{% url 'products' %}" class="btn btn-outline-green rounded-0 mt-5">
+                            <span class="icon">
+                                <i class="fas fa-chevron-left"></i>
+                            </span>
+                            <span class="text-uppercase">Keep Shopping</span>
+                        </a>
+                    </div>
                     {% endfor %}
                 </div>
             </div>

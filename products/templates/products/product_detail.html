@@ -55,16 +55,16 @@
                             <!-- Size selector -->
                             {% with product.has_sizes as s %}
                             {% if s %}
-                                <div class="col-12">
-                                    <p><strong>Size:</strong></p>
-                                    <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
-                                        <option value="xs">XS</option>
-                                        <option value="s">S</option>
-                                        <option value="m" selected>M</option>
-                                        <option value="l">L</option>
-                                        <option value="xl">XL</option>
-                                    </select>
-                                </div>
+                            <div class="col-12">
+                                <p><strong>Size:</strong></p>
+                                <select class="form-control rounded-0 w-50" name="product_size" id='id_product_size'>
+                                    <option value="xs">XS</option>
+                                    <option value="s">S</option>
+                                    <option value="m" selected>M</option>
+                                    <option value="l">L</option>
+                                    <option value="xl">XL</option>
+                                </select>
+                            </div>
                             {% endif %}
                             <!-- Quantity selector -->
                             <div class="col-12">
@@ -93,6 +93,27 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Wishlist Section-->
+                            <div class="col-12">
+                            <!-- Add/Remove from Wishlist buttons-->
+                            {% if product in wishlist.products.all %}
+                                <a href="{% url 'remove_from_wishlist' product.id %}" 
+                                    class="btn btn-left btn-danger rounded-0 mt-5">
+                                    <span class="icon">
+                                        <i class="fa-regular fa-star fa-sm"></i>
+                                    </span>
+                                    <span class="text-uppercase">Remove from Wishlist</span>
+                                </a>  
+                            {% else %}     
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-success rounded-0 mt-5">
+                                    <span class="text-uppercase">Add to wishlist</span>
+                                    <span class="icon">
+                                        <i class="fa-regular fa-star fa-sm"></i>
+                                    </span> 
+                                </a>    
+                            </div>
+                            {% endif %}  
+                            </div>    
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 <a href="{% url 'products' %}" class="btn btn-outline-green rounded-0 mt-5">
                                     <span class="icon">
@@ -107,27 +128,7 @@
                         </div>
                     </form>
                 </div>
-                <!-- Wishlist Section-->
-                <div class="col-12">
-                <!-- Add/Remove from Wishlist buttons-->
-                {% if product in wishlist.products.all %}
-                    <a href="{% url 'remove_from_wishlist' product.id %}" 
-                        class="btn btn-danger rounded-0 mt-5">
-                        <span class="icon">
-                            <i class="fa-regular fa-star fa-sm"></i>
-                        </span>
-                        <span class="text-uppercase">Remove from Wishlist</span>
-                    </a>  
-                {% else %}     
-                    <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-success rounded-0 mt-5">
-                        <span class="text-uppercase">Add to wishlist</span>
-                        <span class="icon">
-                            <i class="fa-regular fa-star fa-sm"></i>
-                        </span> 
-                    </a>    
-                </div>
-                {% endif %}  
-            </div>
+            </div>    
         </div>    
     </div>
 {% endblock %}
