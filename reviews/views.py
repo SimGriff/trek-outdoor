@@ -3,6 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 from products.models import Product
+from profiles.models import UserProfile
 from .models import Review
 from .forms import ProductReviewForm
 
@@ -11,25 +12,27 @@ from .forms import ProductReviewForm
 def add_review(request, product_id):
     """ To add a product review """
     product = get_object_or_404(Product, pk=product_id)
+    user = get_object_or_404(UserProfile, user=request.user)
     if request.user.is_authenticated:
         if request.method == 'POST':
             form = ProductReviewForm(request.POST)
             if form.is_valid():
                 review = form.save(commit=False)
-                review.user = request.user
+                review.user = user
                 review.product = product
-                review.save()
-                messages.success(request, f'Your review for {product.name} has been added')
+                form.save()
+                messages.success(request, f'Successfully updated review for {product.name}')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
-                messages.error(request, 'Failed to add review. Please ensure the form is valid.')
+                messages.error(request, 'Failed to update the review. Please ensure the form is valid.')
         else:
             form = ProductReviewForm()
 
-        template = 'reviews/add_product_review.html'
+        template = 'reviews/add_review.html'
         context = {
             'form': form,
-            'product': product
+            'product': product,
+            'user_profile': user,
         }
 
         return render(request, template, context)
@@ -49,7 +52,6 @@ def edit_review(request, product_id, review_id):
                 review = form.save()
                 review.user = request.user
                 review.product = product
-                review.save()
                 messages.success(request, f'Successfully updated review for {product.name}')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
@@ -57,7 +59,7 @@ def edit_review(request, product_id, review_id):
         else:
             form = ProductReviewForm()
 
-        template = 'reviews/add_product_review.html'
+        template = 'reviews/add_review.html'
         context = {
             'review': review,
             'form': form,
