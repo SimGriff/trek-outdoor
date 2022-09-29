@@ -128,8 +128,24 @@
                         </div>
                     </form>
                 </div>
-            </div>    
-        </div>    
+            </div>  
+        </div> 
+        <!-- Reviews Section-->
+        <div class="row">
+            <div class="col">
+                {% if reviews %}
+                    <h4 class="mt-2">Review for {{ product.name }}</h4>
+                {% else %}
+                    <p class="mt-2">
+                        There are no reviews for {{ product.name }} right now.
+                    </p>
+                {% endif %}
+            </div>
+        <!-- Show all Reviews -->  
+        <div class="row">
+            <div class="col">  
+            
+        </div>
     </div>
 {% endblock %}
 

@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="overlay"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col text-center mt-3">
+                <h2 class="logo-font">Edit Review</h2>
+                <hr class="w-50 mb-1">
+            </div>
+        </div>
+        <!-- Edit Review Form -->
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <form action="{% url 'edit_product_review' %}" method="POST">
+                    {% csrf_token %}
+                    <p class="my-0"><strong>{{ product.name }}</strong></p>
+                    {{ form|crispy }}
+                    <!-- buttons -->
+                    <div class="col s12 center-align">
+                        <!-- cancel button -->
+                        <a href="{{ url_for('get_books') }}" class="btn btn-dark rounded-0" aria-label="cancel">
+                            Cancel <i class="fas fa-xmark right"></i>
+                        </a>
+                        <!-- edit button -->
+                        <button type="submit" class="gbtn btn-dark rounded-0" aria-label="edit">
+                            Confirm <i class="fas fa-pencil right"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+
+{% endblock %}

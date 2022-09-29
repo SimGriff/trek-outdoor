@@ -13,8 +13,7 @@ class ReviewAdmin(admin.ModelAdmin):
         'date',
     )
 
-    ordering = ('-rating', '-date')
-    list_filter = ('rating')
-
+    ordering = ('-product', '-date')
+    list_filter = ('rating',)
 
 admin.site.register(Review, ReviewAdmin)
