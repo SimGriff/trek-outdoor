@@ -44,22 +44,20 @@ def edit_review(request, product_id, review_id):
 
     review = get_object_or_404(Review, pk=review_id)
     product = review.product
-
     if request.user.is_authenticated:
         if request.method == 'POST':
-            form = ProductReviewForm(request.POST)
+            form = ProductReviewForm(request.POST, instance=review)
             if form.is_valid():
-                review = form.save()
-                review.user = request.user
+                form.save()              
                 review.product = product
                 messages.success(request, f'Successfully updated review for {product.name}')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, 'Failed to update the review. Please ensure the form is valid.')
         else:
-            form = ProductReviewForm()
+            form = ProductReviewForm(instance=review)
 
-        template = 'reviews/add_review.html'
+        template = 'reviews/edit_review.html'
         context = {
             'review': review,
             'form': form,

@@ -21,20 +21,20 @@
         <!-- Edit Review Form -->
         <div class="row">
             <div class="col-12 col-lg-6">
-                <form action="{% url 'edit_product_review' %}" method="POST">
+                <form action="{% url 'edit_review' product.id review.id %}" method="POST">
                     {% csrf_token %}
                     <p class="my-0"><strong>{{ product.name }}</strong></p>
                     {{ form|crispy }}
                     <!-- buttons -->
                     <div class="col s12 center-align">
-                        <!-- cancel button -->
-                        <a href="{{ url_for('') }}" class="btn btn-dark rounded-0" aria-label="cancel">
-                            Cancel <i class="fas fa-xmark right"></i>
-                        </a>
                         <!-- edit button -->
                         <button type="submit" class="btn btn-dark rounded-0" aria-label="edit">
                             Confirm <i class="fas fa-pencil right"></i>
                         </button>
+                        <!-- cancel button -->
+                        <a href="{% url 'product_detail' product.id %}" class="btn btn-dark rounded-0" aria-label="cancel">
+                            Cancel <i class="fas fa-xmark right"></i>
+                        </a>
                     </div>
                 </form>
             </div>
