@@ -166,15 +166,14 @@
             {% for review in product.review_set.all %}    
             <div class="card text-center mt-3">
                 <div class="card-body">
-                    <h5 class="card-title">Review for {{ product.name }}</h5>
+                    <h5 class="card-title">Review for <b>{{ product.name }}</b></h5>
+                    <br>
                     <p class="card-text">
                     {{ review.review_text }}
                     </p>
+                    <h6><b>{{ review.rating }} / 5</b></h6>
                     <br>
-                    {{ review.user }}
-                    <br>
-                    {{ review.date }}
-                    <br>
+                    <p class ="muted">Review by: {{ review.user }} on {{ review.date }}</p>
                     <!-- Edit Review Button -->
                     {% if review.user == request.user or request.user.is_superuser %}
                     <a href="{% url 'edit_review' product.id review.id %}" class="btn btn-success rounded-0 mt-5" value="Edit Review">

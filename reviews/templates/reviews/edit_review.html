@@ -23,7 +23,6 @@
             <div class="col-12 col-lg-6">
                 <form action="{% url 'edit_review' product.id review.id %}" method="POST">
                     {% csrf_token %}
-                    <p class="my-0"><strong>{{ product.name }}</strong></p>
                     {{ form|crispy }}
                     <!-- buttons -->
                     <div class="col s12 center-align">
