@@ -39,7 +39,7 @@ def add_review(request, product_id):
 
 
 @login_required
-def edit_review(request, product_id, review_id):
+def edit_review(request,  product_id, review_id):
     """ To edit a product review """
 
     review = get_object_or_404(Review, pk=review_id)
@@ -70,12 +70,13 @@ def edit_review(request, product_id, review_id):
 @login_required
 def delete_review(request, product_id, review_id):
     """ To delete a product review """
+    review = get_object_or_404(Review, pk=review_id)
+    product = get_object_or_404(Product, pk=product_id)
+
     if not request.user:
         messages.error(request, "You can't edit this review")
-        return redirect(reverse('home'))
+        return redirect(reverse('product_detail', args=[product.id]))
 
-    review = get_object_or_404(Review, pk=review_id)
-    product = review.product
     review.delete()
     messages.success(request, f'Deleted review for {product.name}')
     return redirect(reverse('product_detail', args=[product.id]))

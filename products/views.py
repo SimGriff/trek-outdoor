@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.db.models import Q
 from django.db.models.functions import Lower
 
+from reviews.models import Review
 from .models import Product, Category
 from wishlist.models import Wishlist
 
@@ -59,9 +60,10 @@ def all_products(request):
 
 
 def product_detail(request, product_id):
-    """ Shows details of individual products """
+    """ Shows details of individual products with reviews"""
 
     product = get_object_or_404(Product, pk=product_id)
+    reviews = Review.objects.filter(product=product_id)
     wishlist = None
 
     if request.user.is_authenticated:
@@ -72,6 +74,7 @@ def product_detail(request, product_id):
 
     context = {
         'product': product,
+        'reviews': reviews,
         'wishlist': wishlist,
     }
 
