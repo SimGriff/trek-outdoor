@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = development
 
-ALLOWED_HOSTS = ['simgriff-trekoutdoor.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['simgriff-trek-outdoor.herokuapp.com', 'localhost']
 
 
 # Application definition
