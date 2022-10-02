@@ -1,1 +1,1 @@
-web: gunicorn trek-outdoor.wsgi:application
+web: gunicorn trek_outdoor.wsgi:application
