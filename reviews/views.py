@@ -41,7 +41,6 @@ def add_review(request, product_id):
 @login_required
 def edit_review(request,  product_id, review_id):
     """ To edit a product review """
-
     review = get_object_or_404(Review, pk=review_id)
     product = review.product
     if request.user.is_authenticated:
