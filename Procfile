@@ -1,1 +1,1 @@
-web: gunicorn simgriff-trek-outdoor.wsgi:application
+web: gunicorn trek-outdoor.wsgi:application
