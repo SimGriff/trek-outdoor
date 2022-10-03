@@ -55,13 +55,13 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-dark" href="#" id="sale-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-danger" href="#" id="sale-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sale
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="sale-link">
-                <a href="{% url 'products' %}?category=new_offers" class="dropdown-item">New Offers</a>
-                <a href="{% url 'products' %}?category=clearance" class="dropdown-item">Clearance</a>
-                <a href="{% url 'products' %}?category=new_offers,clearance" class="dropdown-item">All Sale Items</a>
+                <a href="{% url 'products' %}?category=new_offers" class="dropdown-item text-danger">New Offers</a>
+                <a href="{% url 'products' %}?category=clearance" class="dropdown-item text-danger">Clearance</a>
+                <a href="{% url 'products' %}?category=new_offers,clearance" class="dropdown-item text-danger">All Sale Items</a>
             </div>
         </li>
     </ul>
