@@ -3,7 +3,7 @@ html {
 }
 
 body {
-    background: url('/media/hiking-4369332_1920.jpg') no-repeat center center fixed;
+    background: url('/media/hiking.jpg') no-repeat center center fixed;
     background-size: cover;
     height: calc(100vh - 160px);
     color: #142126;
