@@ -75,7 +75,7 @@ a.category-badge > span.badge:hover {
 
 .btn-dark {
     background: #142126;
-    color: #B9DEED;
+    color: white;
 }
 
 
@@ -251,7 +251,7 @@ input[name='q']::placeholder {
 }
 
 .allauth-form-inner-content a {
-	color: #17a2b8; /* text-info */
+	color: red; /* text-info */
 }
 
 /* Product Form */
@@ -316,7 +316,7 @@ input[name='q']::placeholder {
         height: calc(100vh - 116px);
     }
 
-    .display-4.logo-font.text-black {
+    .display-4.logo-font.text-dark {
         font-size: 2rem;
     }
 
@@ -337,13 +337,13 @@ input[name='q']::placeholder {
         font-size: .9rem;
     }
 
-    .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0 {
+    .btn.btn-outline-green.rounded-0,
+    .btn.btn-dark.rounded-0 {
         padding: .375rem .375rem;
     }
 
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
+    .btn.btn-outline-green.rounded-0.btn-lg,
+    .btn.btn-dark.rounded-0.btn-lg {
         padding: .375rem .375rem;
         font-size: .75rem;
     }
