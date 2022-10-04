@@ -39,7 +39,7 @@ def add_review(request, product_id):
 
 
 @login_required
-def edit_review(request,  product_id, review_id):
+def edit_review(request, product_id, review_id):
     """ To edit a product review """
     review = get_object_or_404(Review, pk=review_id)
     product = review.product
@@ -47,9 +47,8 @@ def edit_review(request,  product_id, review_id):
         if request.method == 'POST':
             form = ProductReviewForm(request.POST, instance=review)
             if form.is_valid():
-                form.save()              
+                form.save()
                 review.product = product
-                review.user = request.user
                 messages.success(request, f'Successfully updated review for {product.name}')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
