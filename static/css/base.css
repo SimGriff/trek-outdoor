@@ -78,6 +78,10 @@ a.category-badge > span.badge:hover {
     color: white;
 }
 
+.btn-steel {
+    background: #587D9D;
+    color: white;
+}
 
 .btn-outline-green {
     background: white;

@@ -118,7 +118,7 @@
                                 </a>    
                                 {% endif %}  
                                 <!-- Add Review Button-->  
-                                <a href="{% url 'add_review' product.id %}" class="btn btn-success rounded-0 mt-5" value="Add Review" aria-label="add a review">
+                                <a href="{% url 'add_review' product.id %}" class="btn btn-steel rounded-0 mt-5" value="Add Review" aria-label="add a review">
                                     <span class="text-uppercase">Add Review</span>
                                 </a>
                             </div>
@@ -158,7 +158,7 @@
                 <div class ="card-footer">
                 {% if review.user == request.user.userprofile or request.user.is_superuser %}
                     <!-- Edit Review Button -->
-                    <a href="{% url 'edit_review' product.id review.id %}" class="btn btn-success rounded-0 mt-5" value="Edit Review" aria-label="edit your review">
+                    <a href="{% url 'edit_review' product.id review.id %}" class="btn btn-steel rounded-0 mt-5" value="Edit Review" aria-label="edit your review">
                         <span class="text-uppercase">Edit Review</span>
                     </a>
                     <!-- Delete Review modal -->
