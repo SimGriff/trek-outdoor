@@ -21,7 +21,7 @@ def add_review(request, product_id):
                 review.user = user
                 review.product = product
                 form.save()
-                messages.success(request, f'Successfully updated review for {product.name}')
+                messages.success(request, f'Successfully added review for {product.name}')
                 return redirect(reverse('product_detail', args=[product.id]))
             else:
                 messages.error(request, 'Failed to update the review. Please ensure the form is valid.')
