@@ -79,7 +79,7 @@
                                     <div class="input-group">
                                         <div class="input-group-prepend">
                                             <button class="decrement-qty btn btn-dark rounded-0" 
-                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="decrement-qty_{{ product.id }}" aria-label="decrease quantity">
                                                 <span class="icon">
                                                     <i class="fas fa-minus"></i>
                                                 </span>
@@ -90,7 +90,7 @@
                                             data-item_id="{{ product.id }}" id="id_qty_{{ product.id }}">
                                         <div class="input-group-append">
                                             <button class="increment-qty btn btn-dark rounded-0"
-                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}">
+                                                data-item_id="{{ product.id }}" id="increment-qty_{{ product.id }}" aria-label="increase quantity">
                                                 <span class="icon">
                                                     <i class="fas fa-plus"></i>
                                                 </span>
@@ -103,14 +103,14 @@
                             <div class="col{% if s %}-12 mt-2{% endif %}">
                                 {% if product in wishlist.products.all %}
                                 <a href="{% url 'remove_from_wishlist' product.id %}" 
-                                    class="btn btn-left btn-danger rounded-0 mt-5">
+                                    class="btn btn-left btn-danger rounded-0 mt-5" aria-label="remove from wishlist">
                                     <span class="icon">
                                         <i class="fa-regular fa-heart fa-sm"></i>
                                     </span>
                                     <span class="text-uppercase">Remove from Wishlist</span>
                                 </a>  
                                 {% else %}     
-                                <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-green rounded-0 mt-5">
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="btn btn-outline-green rounded-0 mt-5" aria-label="add to wishlist">
                                     <span class="text-uppercase">Add to wishlist</span>
                                     <span class="icon">
                                         <i class="fa-regular fa-heart fa-sm"></i>
@@ -118,7 +118,7 @@
                                 </a>    
                                 {% endif %}  
                                 <!-- Add Review Button-->  
-                                <a href="{% url 'add_review' product.id %}" class="btn btn-success rounded-0 mt-5" value="Add Review">
+                                <a href="{% url 'add_review' product.id %}" class="btn btn-success rounded-0 mt-5" value="Add Review" aria-label="add review">
                                     <span class="text-uppercase">Add Review</span>
                                 </a>
                             </div>
@@ -131,7 +131,7 @@
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
                                 <!-- Add to cart Button-->
-                                <input type="submit" class="btn btn-dark rounded-0 text-uppercase mt-5" value="Add to Cart">
+                                <input type="submit" class="btn btn-dark rounded-0 text-uppercase mt-5" value="Add to Cart" aria-label="add to cart">
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}">
                             {% endwith %}
@@ -158,11 +158,11 @@
                 <div class ="card-footer">
                 {% if review.user == request.user.userprofile or request.user.is_superuser %}
                     <!-- Edit Review Button -->
-                    <a href="{% url 'edit_review' product.id review.id %}" class="btn btn-success rounded-0 mt-5" value="Edit Review">
+                    <a href="{% url 'edit_review' product.id review.id %}" class="btn btn-success rounded-0 mt-5" value="Edit Review" aria-label="edit review">
                         <span class="text-uppercase">Edit Review</span>
                     </a>
                     <!-- Delete Review modal -->
-                    <a class="btn btn-danger rounded-0 mt-5" data-toggle="modal" data-target="#deleteReview{{ review.id }}Modal">
+                    <a class="btn btn-danger rounded-0 mt-5" data-toggle="modal" data-target="#deleteReview{{ review.id }}Modal" aria-label="delete">
                         <i class="fas fa-trash-can left text-uppercase"></i> Delete
                     </a>
                     <div class="modal fade" id="deleteReview{{ review.id }}Modal" tabindex="-1" role="dialog" aria-labelledby="deleteReview{{ review.id }}Modal" aria-hidden="true">
@@ -178,9 +178,9 @@
                                     <h4>Please Confirm Deletion</h4>
                                 </div>
                                 <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="cancel">
                                     Cancel</button>
-                                <a class="btn btn-danger" href="{% url 'delete_review' product.id review.id %}" id="deleteReview{{ review.id }}">
+                                <a class="btn btn-danger" href="{% url 'delete_review' product.id review.id %}" id="deleteReview{{ review.id }}" confirm deletion>
                                     Delete Review</button>
                                 </a>
                             </div>

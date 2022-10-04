@@ -52,17 +52,11 @@
                                                 </a>
                                             </p>
                                             {% endif %}
-                                            <!-- Product rating -->
-                                            <!--{% if product.rating %}
-                                                <small class="text-muted"><i class="fa-regular fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
                                             <!-- Remove from Wishlist button -->
                                             <a href="{% url 'remove_from_wishlist' product.id %}" 
-                                                class="btn btn-danger btn-small rounded-0 mt-5">
+                                                class="btn btn-danger btn-small rounded-0 mt-5" aria-label="remove from wishlist">
                                                 <span class="icon">
-                                                    <i class="fa-regular fa-star fa-sm"></i>
+                                                    <i class="fa-regular fa-heart fa-sm"></i>
                                                 </span>
                                                 <span class="small">Remove from Wishlist</span>
                                             </a>
@@ -95,7 +89,7 @@
 					{% empty %}
                     <div class="col-12 d-none d-xl-block text-center mb-5">
                         <h4 class="">You have no products in your Wishlist</h4>
-                        <a href="{% url 'products' %}" class="btn btn-outline-green rounded-0 mt-5">
+                        <a href="{% url 'products' %}" class="btn btn-outline-green rounded-0 mt-5" aria-label="keep shopping">
                             <span class="icon">
                                 <i class="fas fa-chevron-left"></i>
                             </span>
@@ -107,7 +101,7 @@
             </div>
         </div>
     <div class="up-btn shadow-sm rounded-0 border border-black">
-        <a class="link-btn d-flex h-100">
+        <a class="link-btn d-flex h-100" aria-label="up button">
             <i class="fas fa-arrow-up text-green mx-auto my-auto"></i>
         </a>	
     </div>
