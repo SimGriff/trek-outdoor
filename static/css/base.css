@@ -24,6 +24,12 @@ body {
     text-transform: uppercase;
 }
 
+.logo-font-white {
+    color: white;
+    text-transform: uppercase;
+}
+
+
 .main-logo-link {
     width: fit-content;
 }

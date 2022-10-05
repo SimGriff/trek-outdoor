@@ -1,61 +1,63 @@
 <!-- Search bar -->
-<li class="list-inline-item">
-    <a class="text-dark nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="search">
-        <div class="text-center">
-            <div><i class="fas fa-search fa-lg"></i></div>
-        </div>
-    </a>
-    <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
-        <form class="form" method="GET" action="{% url 'products' %}">
-            <div class="input-group w-100">
-                <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
-                <div class="input-group-append">
-                    <button class="form-control form-control btn btn-dark border rounded-0" type="submit" aria-label="search for product">
-                        <span class="icon">
-                            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
-                        </span>
-                    </button>
-                </div>
+<ul>
+    <li class="list-inline-item">
+        <a class="text-dark nav-link d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="search">
+            <div class="text-center">
+                <div><i class="fas fa-search fa-lg"></i></div>
             </div>
-        </form>
-    </div>
-</li>
-<!-- My Account dropdown-->  
-<li class="list-inline-item dropdown">
-    <a class="text-dark nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="user options">
-      <div class="text-center">
-          <div><i class="fa-solid fa-user fa-lg"></i></div>
-          <!-- <p class="my-0">My Account</p> -->
-      </div>
-    </a>
-    <div class="dropdown-menu border-0" aria-labelledby="user-options">
-      {% if request.user.is_authenticated %}
-          {% if request.user.is_superuser %}
-              <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-          {% endif %}
-          <a href="{% url 'profile' %}" class="dropdown-item">My Account</a>
-          <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-      {% else %}
-          <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-          <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
-      {% endif %}
-    </div>
-</li>
-<!-- Wishlist -->
-{% if request.user.is_authenticated %}
-<li class="list-inline-item">
-    <a class="nav-link text-dark d-block d-lg-none" href="{% url 'wishlist' %}" aria-label="wishlist">
-        <div class="text-center">
-            <div><i class="fa-solid fa-heart fa-lg"></i></div>
+        </a>
+        <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
+            <form class="form" method="GET" action="{% url 'products' %}">
+                <div class="input-group w-100">
+                    <input class="form-control border rounded-0" type="text" name="q" placeholder="Search our site">
+                    <div class="input-group-append">
+                        <button class="form-control form-control btn btn-dark border rounded-0" type="submit" aria-label="search for product">
+                            <span class="icon">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
-    </a>
-</li>
-{% endif %}
-<!-- Shopping Cart -->
-<li class="list-inline-item">
-    <a class="{% if grand_total %}font-weight-bold{% else %}text-dark{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}" aria-label="shopping cart">
-      <div class="text-center">
-          <div><i class="fa-sharp fa-solid fa-cart-shopping fa-lg"></i></div>
-      </div>
-    </a>
-</li>
+    </li>
+    <!-- My Account dropdown-->  
+    <li class="list-inline-item dropdown">
+        <a class="text-dark nav-link d-block d-lg-none" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="user options">
+        <div class="text-center">
+            <div><i class="fa-solid fa-user fa-lg"></i></div>
+            <!-- <p class="my-0">My Account</p> -->
+        </div>
+        </a>
+        <div class="dropdown-menu border-0" aria-labelledby="user-options">
+        {% if request.user.is_authenticated %}
+            {% if request.user.is_superuser %}
+                <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+            {% endif %}
+            <a href="{% url 'profile' %}" class="dropdown-item">My Account</a>
+            <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+        {% else %}
+            <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+            <a href="{% url 'account_login' %}" class="dropdown-item">Sign In</a>
+        {% endif %}
+        </div>
+    </li>
+    <!-- Wishlist -->
+    {% if request.user.is_authenticated %}
+    <li class="list-inline-item">
+        <a class="nav-link text-dark d-block d-lg-none" href="{% url 'wishlist' %}" aria-label="wishlist">
+            <div class="text-center">
+                <div><i class="fa-solid fa-heart fa-lg"></i></div>
+            </div>
+        </a>
+    </li>
+    {% endif %}
+    <!-- Shopping Cart -->
+    <li class="list-inline-item">
+        <a class="{% if grand_total %}font-weight-bold{% else %}text-dark{% endif %} nav-link d-block d-lg-none" href="{% url 'view_cart' %}" aria-label="shopping cart">
+        <div class="text-center">
+            <div><i class="fa-sharp fa-solid fa-cart-shopping fa-lg"></i></div>
+        </div>
+        </a>
+    </li>
+</ul>
