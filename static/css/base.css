@@ -37,7 +37,7 @@ body {
 }
 
 .bg-red {
-    background-color: red;
+    background-color: #BD2713;
 }
 
 .text-shadow {
@@ -69,7 +69,7 @@ a.category-badge > span.badge:hover {
 
 /* buttons */
 .shop-button {
-    background: red;
+    background: #BD2713;
     color: white;
     min-width: 230px;
 }
