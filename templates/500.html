@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <!-- error message with home button -->
+    <div class="container">
+        <div class="card border-info mb-3" style="max-width: 18rem;">
+            <div class="card-header">Something went worng, please try again later.</div>
+            <div class="card-body text-info">
+                <p class="card-text">Click<a href="{% url 'home' %}" class="btn btn-steel" aria-label="home link">here</a>
+                    to return to our store.
+                </p>
+            </div>
+        </div>
+    </div>
+{% endblock %}
