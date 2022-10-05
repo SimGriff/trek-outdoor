@@ -118,7 +118,7 @@
                                 </a>    
                                 {% endif %}  
                                 <!-- Add Review Button-->  
-                                <a href="{% url 'add_review' product.id %}" class="btn btn-steel rounded-0 mt-5" value="Add Review" aria-label="add a review">
+                                <a href="{% url 'add_review' product.id %}" class="btn btn-steel rounded-0 mt-5" aria-label="add a review">
                                     <span class="text-uppercase">Add Review</span>
                                 </a>
                             </div>
@@ -158,7 +158,7 @@
                 <div class="card-text">
                 {% if review.user == request.user.userprofile or request.user.is_superuser %}
                     <!-- Edit Review Button -->
-                    <a href="{% url 'edit_review' product.id review.id %}" class="btn btn-steel rounded-0 mt-5" value="Edit Review" aria-label="edit your review">
+                    <a href="{% url 'edit_review' product.id review.id %}" class="btn btn-steel rounded-0 mt-5" aria-label="edit your review">
                         <span class="text-uppercase">Edit Review</span>
                     </a>
                     <!-- Delete Review modal -->
@@ -180,23 +180,24 @@
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="cancel">
                                     Cancel</button>
-                                <a class="btn btn-danger" href="{% url 'delete_review' product.id review.id %}" id="deleteReview{{ review.id }}" confirm deletion>
-                                    Delete Review</button>
+                                <a href="{% url 'delete_review' product.id review.id %}" class="btn btn-danger" id="deleteReview{{ review.id }}">
+                                    Delete Review
                                 </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 {% endif %}
+                </div>
+                <hr class="w-50 mb-1">
             </div>
-            <hr class="w-50 mb-1">
-        </div>
-        <div>
-        {% empty %}
-            <h6 class="mt-2">
-                There are no reviews for <b>{{ product.name }}</b> right now.
-            </h6>
-        {% endfor %}
+            <div>
+            {% empty %}
+                <h6 class="mt-2">
+                    There are no reviews for <b>{{ product.name }}</b> right now.
+                </h6>
+            {% endfor %}
+            </div>
         </div>
     </div>
 {% endblock %}
