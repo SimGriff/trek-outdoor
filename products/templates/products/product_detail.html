@@ -146,16 +146,16 @@
             <hr class="w-50 mb-1">
             <!-- Display Reviews -->
             {% for review in product.review_set.all %}    
-            <div class="card-body text-center mt-3">
+            <div class="card-body text-center mt-4 bg-light border-light">
                 <h4 class="card-title">Review for <b>{{ product.name }}</b></h4>
                 <br>
                 <div class="card-text">
                     <p>{{ review.review_text }}</p>
                     <h6><b>{{ review.rating }} / 5</b></h6>
                     <br>
-                    <p class ="muted">Review by: {{ review.user }} on {{ review.date }}</p>
+                    <p class ="muted">Review by: <strong>{{ review.user }}</strong> on {{ review.date }}</p>
                 </div>
-                <div class ="card-footer">
+                <div class="card-text">
                 {% if review.user == request.user.userprofile or request.user.is_superuser %}
                     <!-- Edit Review Button -->
                     <a href="{% url 'edit_review' product.id review.id %}" class="btn btn-steel rounded-0 mt-5" value="Edit Review" aria-label="edit your review">
@@ -189,13 +189,14 @@
                 </div>
                 {% endif %}
             </div>
+            <hr class="w-50 mb-1">
         </div>
-            </div>
-            {% empty %}
-                <h6 class="mt-2">
-                    There are no reviews for <b>{{ product.name }}</b> right now.
-                </h6>
-            {% endfor %}
+        <div>
+        {% empty %}
+            <h6 class="mt-2">
+                There are no reviews for <b>{{ product.name }}</b> right now.
+            </h6>
+        {% endfor %}
         </div>
     </div>
 {% endblock %}
