@@ -147,7 +147,7 @@
             <!-- Display Reviews -->
             {% for review in product.review_set.all %}    
             <div class="card-body text-center mt-3">
-                <h5 class="card-title">Review for <b>{{ product.name }}</b></h5>
+                <h4 class="card-title">Review for <b>{{ product.name }}</b></h4>
                 <br>
                 <div class="card-text">
                     <p>{{ review.review_text }}</p>
@@ -175,7 +175,7 @@
                                 </button>
                                 </div>
                                 <div class="modal-body text-center">
-                                    <h5>Please Confirm Deletion</h5>
+                                    <h6>Please Confirm Deletion</h6>
                                 </div>
                                 <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="cancel">
@@ -192,9 +192,9 @@
         </div>
             </div>
             {% empty %}
-                <h5 class="mt-2">
+                <h6 class="mt-2">
                     There are no reviews for <b>{{ product.name }}</b> right now.
-                </h5>
+                </h6>
             {% endfor %}
         </div>
     </div>
