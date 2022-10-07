@@ -50,6 +50,6 @@ def remove_from_wishlist(request, product_id):
 
     # Remove product from the wishlist
     wishlist.products.remove(product)
-    messages.info(request, f'{product.name} has been removed from your Wishlist')
+    messages.info(request, f'{product.name} was removed from your Wishlist')
 
     return redirect(request.META.get('HTTP_REFERER'))
