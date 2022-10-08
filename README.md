@@ -709,3 +709,87 @@ Then I realised that I had used my Heroku app in my Procfile instead of the fold
 
 
 
+## Deployment
+
+### Heroku
+The project was deployed to Heroku using the following steps:
+* Create a requirements.txt file using the terminal command pip freeze > requirements.txt.
+* Create a requirements.txt file using the terminal command pip freeze > requirements.txt.
+* Next, create your Procfile using the following terminal command echo web: python app.py > Procfile
+* Git add and git commit the new requirements and Procfile and then git push the project to GitPod. 
+* Go to Heroku.com 
+* Click on ‘new’ in the top right, select ‘Create a new app’ from the dropdown.
+* Give the app a name, all lowercase with any spaces replaced with -.
+* Select the region as ‘Europe’.
+* Select ‘Create App’
+* From the Heroku dashboard of your new app, click on ‘Deploy’ , then ‘Deployment method’ and select GitHub. 
+* Confirm linking of the Heroku app to the correct Github repository.
+* In the Heroku dashboard, go to settings at the top of the page, select ‘Reveal Config Vars’.
+* Set the following config vars:
+
+| KEY | VALUE |
+| --- | --- | 
+| IP | 0.0.0.0 |
+| PORT | 5000 |
+| SECRET_KEY  | Your Secret Key |
+| MONGO_URI  | Your MongoDB URI |
+| MONGO_DBNAME  | Name of your database |
+
+
+
+* Hide Config Vars
+* Select ‘Deploy’, then GitHub, search and connect to your repository.
+* Select ‘Enable Automatic Deployment’ from the GitHub Master / Main branch
+* Click on ‘Open App’ to launch your App in a new Browser window.
+
+---
+
+## Credits
+
+### Code
+* Boutique Ado
+The ‘Boutique Ado’ walkthrough project was an invaluable resource for my e-commerce project and helped me with the overall structure and understanding for this project.
+The following tutorial videos were a great source of information for my Wishlist app
+* https://www.youtube.com/watch?v=OgA0TTKAtqQ
+* https://www.youtube.com/watch?v=kD2vWOZFFcw
+* https://www.youtube.com/watch?v=IezGjkpKgYI
+The following tutorial video also helped me to understand and develop my Reviews App;
+https://www.youtube.com/watch?v=8iCqlFyFu2s&t=136s
+
+* [Stack Overflow:](https://stackoverflow.com/)
+I found the following Stackoverflow posts while I was stuck on many aspects of my Reviews App;
+https://stackoverflow.com/questions/56982579/how-to-display-all-the-reviews-for-the-particular-product
+https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django
+
+* Slack
+Slack has been a useful source of information throughout my time with the Code Institute . In particular, I found a number of very useful discussion on advantages of creating new apps for wishlist/reviews with ckz8780 and other student  in # project-milestone-4 thread.
+
+* [W3Schools:](https://www.w3schools.com/)
+W3 Schools was another site that provided invaluable information in general on all aspects of HTML, CSS and JavaScript including layout issues and creating functions.
+* I referred to the Django documentation https://docs.djangoproject.com/en/4.0/ throughout the project.
+
+* Mentor Support:
+Thanks to my mentor Rohit Sharma for his helpful feedback and support. 
+
+### Media
+
+* The wireframes were created using [Balsamiq.](https://balsamiq.com/)
+* pixabay [pixabay.com]( https://pixabay.com/)
+The main hero image is from pixabay with a Free to use license.
+* [pixlr.com](https://pixlr.com/e)
+The PIXLR website was used to resize images and editing photos for this project.
+
+* [Font Awesome](https://fontawesome.com/)
+Fontawesome icons were also used throughout the site.
+* [sportpersuit.com](https://www.sportpursuit.com/) 
+All product images have been downloaded from sportpursuit.com an e-commerce store. All product descriptions were also from this website.
+* [Coolors](https://coolors.co/) was used to generate a colour scheme
+* [Techsini](https://techsini.com/multi-mockup/index.php) 
+To produce mockup image across multiple devices.
+
+### Acknowledgements 
+* Thanks to my mentor Rohit Sharma for his helpful feedback during this project.
+* My friends and family for their continuing support during this course and helping me test the app.
+* The Code Institute tutors who have responded quickly to my queries and added to my understanding of the subject.
+
+---
