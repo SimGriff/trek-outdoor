@@ -573,7 +573,12 @@ For the Lighthouse testing I initially received low scores across the pages for 
 ![security](docs/screenshots/user-stories-security.png)
 
 15. As an unregistered user, I want to view order confirmation after checkout
-Remove? Don’t think you can order without providing email?
+
+* An order confirmation is confirmed on screen with all the details of the order, there is also a pop up success message displayed at the top right of the screen stating that a confirmation email has also been sent to the user.
+
+![order confirmation](docs/screenshots/user-stories-order-confirmation.png)
+
+![email](docs/screenshots/user-stories-email.png)
 
 #### Registered User
 
