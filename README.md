@@ -322,3 +322,32 @@ The wireframes for the site were produced using [Balsamiq:](https://balsamiq.com
 
 
 ---
+
+## Technologies Used
+
+### Languages Used
+
+* [HTML](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [JavaScript](https://www.javascript.com/)
+* [Python](https://www.python.org/)
+---
+### Frameworks, Libraries & Programs Used
+
+* [Balsamiq](https://balsamiq.com/) was used to create the wireframes during the design process.
+* [Coolors](https://coolors.co/) was used to generate a colour scheme.
+* [Google Fonts](https://fonts.google.com/) was used to import the fonts used in this project.
+* [Font Awesome](https://fontawesome.com) was used throughout the website to add icons for aesthetic and UX purposes.   
+* [Adobe Color](https://color.adobe.com/create/color-contrast-analyzer) contrast checker used for this project.
+* [pixlr.com](https://pixlr.com/e) was used to resize images and editing photos for this project.
+* [Techsini](https://techsini.com/multi-mockup/index.php) was used to produce mockup image across multiple devices.
+* [Django]( https://www.djangoproject.com/) made it easier to build my site more quickly and with far less code.  
+* [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) was used to assist with the responsiveness and styling throughout the site. 
+* [jQuery](https://jquery.com/) was used as a JavaScript library to help write less JavaScript and do more. 
+* [Stripe](https://stripe.com/gb) is an online payment processing and credit card processing platform that was used to handle payments made on the site. Stripes webhooks were also used to offer payment backup in the event of payment failure. 
+* [AWS(Amazon Web Services)](https://aws.amazon.com/) was used to host the static files and media files used by the site.
+* [Gitpod:](https://gitpod.io/projects) was the code editor used throughout the project.
+* [Git](https://git-scm.com/) was used for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
+* [Heroku](https://id.heroku.com/) was used to deploy the application.
+
+---
