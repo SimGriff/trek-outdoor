@@ -162,13 +162,13 @@
                         <span class="text-uppercase">Edit Review</span>
                     </a>
                     <!-- Delete Review modal -->
-                    <a class="btn btn-danger rounded-0 mt-5" data-toggle="modal" data-target="#deleteReview{{ review.id }}Modal" aria-label="delete review">
+                    <a class="btn btn-danger rounded-0 mt-5 text-center" data-toggle="modal" data-target="#deleteReview{{ review.id }}Modal" aria-label="delete review">
                         <i class="fas fa-trash-can left text-uppercase"></i> Delete
                     </a>
-                    <div class="modal fade" id="deleteReview{{ review.id }}Modal" tabindex="-1" role="dialog" aria-labelledby="deleteReview{{ review.id }}Modal" aria-hidden="true">
+                    <div class="modal fade text-center" id="deleteReview{{ review.id }}Modal" tabindex="-1" role="dialog" aria-labelledby="deleteReview{{ review.id }}Modal" aria-hidden="true">
                         <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
+                            <div class="modal-content text-center"> 
+                                <div class="modal-header text-center">
                                 <h5 class="modal-title" id="deleteReview{{ review.id }}ModalLabel">Delete Review</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
@@ -177,7 +177,7 @@
                                 <div class="modal-body text-center">
                                     <h6>Please Confirm Deletion</h6>
                                 </div>
-                                <div class="modal-footer">
+                                <div class="modal-footer text-center">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="cancel">
                                     Cancel</button>
                                 <a href="{% url 'delete_review' product.id review.id %}" class="btn btn-danger" id="deleteReview{{ review.id }}">

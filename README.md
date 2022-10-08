@@ -1,6 +1,6 @@
 # Trek Outdoor
 ![Screenshot of mockup](static/images/screenshots/mockup.png)
-View the deployed site [here:](https://bookworm-project3.herokuapp.com/)
+View the deployed site [here:](https://simgriff-trek-outdoor.herokuapp.com/)
 ## User Experience (UX)
 
 ---
@@ -57,11 +57,16 @@ To process a test stripe payment, please use the following details.
 
 ## Features
 ### Home Page
-- [Home Page](static/images/screenshots/home-page.png)
+
 * General
   - The Hero image covers the home page completely except for the Navigation section at the top of the page. The image draws the user in and invites the user into the site with a beautiful picture of the great outdoors.
   - The site Logo appears on the top left of the page within the navbar.
+
+![Home Page](docs/screenshots/home.png)
+
 * Navigation
+
+![Site navigation menu](docs/screenshots/site-nav.png)
   - The Navbar appears on all pages throughout the site. The site logo appears on the left and is read by the user first, reading left to right, top to bottom. 
   - Navigation links are also displayed for each product category with drop-down menus displaying all the available subcategories. 
 Categories and sub-categories
@@ -96,29 +101,48 @@ Categories and sub-categories
 
 * Search feature
   - The search bar is centred at the top of the page allowing the user to search for products by entering a keyword.
+
 * Main Site Icons
+
+![Main Page Icons](docs/screenshots/user-stories-register-sign-in.png)
   - Fontawesome icons are shown at the top of the page representing ‘My Account’, ‘Wishlist’ and the Shopping Cart. There is a further drop-down option under ‘My Account’ for ‘Sign In’ and ‘Register’.
  * Shop Now button
   - This button is presented on the main page and takes the user directly into the ‘All Products’ section.
+
+![Shop now button](docs/screenshots/shopnow.png)
+
 ### Products Page
-- [Products Page](static/images/screenshots/products-page.png)
+
+![Products Page](docs/screenshots/user-stories-sort.png)
+
 * The Products page displays relevant products displayed on individual cards. The number of products is displayed in the top left of the section with a link to the home page next to this.
 * Products can be sorted by Price, Rating, Name and Category with a drop-down selector on the right side of the page. 
 * Admin also have access to two further buttons to delete or update a product.
+
 ### Product Details Page
-- [Product Details Page](static/images/screenshots/product-details.png)
+
+![Product Details Page](docs/screenshots/user-stories-product-details.png)
+
 * Features the product image on the left.
 * Product details displayed on right side of image, including product name, description, price, category and rating.
 * When user signed in, a white heart icon is displayed on bottom right of image that enables signed add product to their wishlist. The heart icon changes to green once selected, it can be removed by selected once again.
 * Quantity selector allows user to select required number of products.
 * Add to Cart button adds product to users shopping cart, shopping cart icon at top of page is updated with the relevant amount. 
+* Feedback provided to shopper via a popup from Bootstrap toasts, informing the user that item has been added with a link to the shopping cart page.
 
-  * Feedback provided to shopper via a popup from Bootstrap toasts, informing the user that item has been added with a link to the shopping cart page.
-- [Shopping Cart Success](static/images/screenshots/shopping-cart.png)
+![Shopping Cart Success](docs/screenshots/cart-success.png)
+
 * Admin also have access to two further buttons to delete or update a product.
-* Reviews - Any product reviews are listed underneath the product card. A signed in user has the option to edit or delete any reviews they have added. 
+* Reviews - Any product reviews are listed underneath the product card. A signed in user has the option to edit or delete any reviews they have added via the two buttons beneath the review that are only available to the user that created the review, or admin.
+
+![Edit Review Buttons](docs/screenshots/edit-review-btn.png)
+
+
   - Edit – User is taken to the Edit Review form and asked to confirm any changes.
-   - Delete – Once selected, a Delete confirmation modal is displayed to safeguard against accidental deletion.
+
+![Edit Review Form](docs/screenshots/edit-review-form.png)
+
+  - Delete – Once selected, a Delete confirmation modal is displayed to safeguard against accidental deletion.
   - If the user has not added a review yet, the Add Review button is displayed and the user is taken to the Add Review Form.
 * Add/Edit Review Page 
 - [Add Review Form](static/images/screenshots/add-review-form.png)
