@@ -60,15 +60,16 @@ To process a test stripe payment, please use the following details.
 
 * General
   - The Hero image covers the home page completely except for the Navigation section at the top of the page. The image draws the user in and invites the user into the site with a beautiful picture of the great outdoors.
-  - The site Logo appears on the top left of the page within the navbar.
+  - The site Logo appears on the top left of the page within the navbar and appears on all pages, when a user clicks on the logo they are taken back to the home page.
 
 ![Home Page](docs/screenshots/home.png)
 
 * Navigation
-
-![Site navigation menu](docs/screenshots/site-nav.png)
   - The Navbar appears on all pages throughout the site. The site logo appears on the left and is read by the user first, reading left to right, top to bottom. 
   - Navigation links are also displayed for each product category with drop-down menus displaying all the available subcategories. 
+
+![Site navigation menu](docs/screenshots/site-nav.png)
+
 Categories and sub-categories
   * All Products
      - By Price
@@ -99,29 +100,34 @@ Categories and sub-categories
      - Clearance
      - All Sale items
 
+
 * Search feature
   - The search bar is centred at the top of the page allowing the user to search for products by entering a keyword.
 
+  - The search results are displayed on the main page in the same format as the main products page with cards representing each item that matches the search criteria.
+
+![Search Results](docs/screenshots/user-stories-search.png)
+
+
 * Main Site Icons
+  - Fontawesome icons are shown at the top of the page representing ‘My Account’, ‘Wishlist’ and the Shopping Cart. There is a further drop-down option under ‘My Account’ for ‘Sign In’ and ‘Register’.
 
 ![Main Page Icons](docs/screenshots/user-stories-register-sign-in.png)
-  - Fontawesome icons are shown at the top of the page representing ‘My Account’, ‘Wishlist’ and the Shopping Cart. There is a further drop-down option under ‘My Account’ for ‘Sign In’ and ‘Register’.
- * Shop Now button
+ 
+* Shop Now button
   - This button is presented on the main page and takes the user directly into the ‘All Products’ section.
 
 ![Shop now button](docs/screenshots/shopnow.png)
 
 ### Products Page
 
-![Products Page](docs/screenshots/user-stories-sort.png)
-
 * The Products page displays relevant products displayed on individual cards. The number of products is displayed in the top left of the section with a link to the home page next to this.
 * Products can be sorted by Price, Rating, Name and Category with a drop-down selector on the right side of the page. 
 * Admin also have access to two further buttons to delete or update a product.
 
-### Product Details Page
+![Products Page](docs/screenshots/user-stories-sort.png)
 
-![Product Details Page](docs/screenshots/user-stories-product-details.png)
+### Product Details Page
 
 * Features the product image on the left.
 * Product details displayed on right side of image, including product name, description, price, category and rating.
@@ -130,6 +136,8 @@ Categories and sub-categories
 * Add to Cart button adds product to users shopping cart, shopping cart icon at top of page is updated with the relevant amount. 
 * Feedback provided to shopper via a popup from Bootstrap toasts, informing the user that item has been added with a link to the shopping cart page.
 
+![Product Details Page](docs/screenshots/user-stories-product-details.png)
+
 ![Shopping Cart Success](docs/screenshots/cart-success.png)
 
 * Admin also have access to two further buttons to delete or update a product.
@@ -137,52 +145,82 @@ Categories and sub-categories
 
 ![Edit Review Buttons](docs/screenshots/edit-review-btn.png)
 
-* Add/Edit Review Page
+### Add/Edit Review Page
 
-  - Edit – User is taken to the Edit Review form and asked to confirm any changes, they layout of the add rfeview form is identical.
+* Edit – User is taken to the Edit Review form and asked to confirm any changes, they layout of the add review form is identical.
 
 ![Edit Review Form](docs/screenshots/edit-review-form.png)
 
-  - Delete – Once selected, a Delete confirmation modal is displayed to safeguard against accidental deletion.
-  - If the user has not added a review yet, the Add Review button is displayed and the user is taken to the Add Review Form.
-* Add/Edit Review Page 
+* Delete – Once selected, a Delete confirmation modal is displayed to safeguard against accidental deletion.
+* If the user has not added a review yet, the Add Review button is displayed and the user is taken to the Add Review Form.
+
+![Edit Review Modal](docs/screenshots/review-modal-btn.png)
 
 ### Wishlist
-- [Wishlist Page](static/images/screenshots/wishlist-page.png)
-* Displays all products added to users wishlist. Products are displayed in the same format as the main products page with the same functionality. 
-* Each product in the wishlist also has a quantity selector and an add to cart button enabling the user to easily add their wishlist items to the shopping cart.
-* Once heart icon selected feedback provided to shopper via a popup from Bootstrap toasts, informing the user that item has been added to their wishlist.
-* A remove link is shown at the bottom of the product card so that a product can be easily removed from their wishlist.
+
+* The logged in user can add any item to their wishlist via the add to wishlist button within the product details page.
+
+![Add to wishlist button](docs/screenshots/user-stories-register-wishlist-btn.png)
+
+* The page displays all products added to the users wishlist. Products are displayed in the same format as the main products page with the same functionality. 
+
+![Wishlist Page](docs/screenshots/user-stories-wishlist-page.png)
+
+* Once selected, each product in the wishlist also has the same functionality as the product details page, with an additional remove from wishlist button.
 
 * Shopping Cart Success Pop up
-- [Shopping Cart Success](static/images/screenshots/shopping-cart-success.png)
+
+![Wishlist Page](docs/screenshots/cart-success.png)
 
 ### Shopping Cart
-- [Shopping Cart Page](static/images/screenshots/shopping-cart-page.png)
-  - Each product selected by the shopper is listed along with an image, Name of product, size (if applicable), SKU code and price.
-  - The shopper can adjust the quantity of an individual product in the cart or remove it completely.
-  - At the bottom of the listed products in the cart is a Cart Total, Delivery Charge (if applicable) and Grand total.
-  - The shopper is given two option buttons under the grand total, to Keep Shopping or go to the Secure Checkout.
+
+*  Each product selected by the shopper is listed along with an image, Name of product, size (if applicable), SKU code and price.
+*  The shopper can adjust the quantity of an individual product in the cart or remove it completely.
+*  At the bottom of the listed products in the cart is a Cart Total, Delivery Charge (if applicable) and Grand total.
+*  The shopper is given two option buttons under the grand total, to Keep Shopping or go to the Secure Checkout.
+
+![Shopping Cart Page](docs/screenshots/user-stories-shopping-cart.png)
 
 ### Checkout Page
-- [Checkout Page](static/images/screenshots/checkout-page.png)
-  - Shipping and payment information form shown on the left
-  - Allows user to save information if signed in. If not signed in, Create an account or Sign in to save this information message is presented with the appropriate link.
-- [Order Success](static/images/screenshots/order-success.png)
-  - Once order submitted success message displayed with order summary, email order confirmation also sent to user’s email address
-  - On the left of the page products in the cart are listed, providing a product image, product name, size (if applicable), quantity and price. 
-  - Under the listed products is an Order Total, Delivery Charge (if applicable) and Grand total.
+
+* Shipping and payment information form is shown on the left.
+* Allows user to save information if signed in. If not signed in, Create an account or Sign in to save this information message is presented with the appropriate link.
+* Order summary is shown on the right, with delivery charges, if applicable and a grand total.
+
+![Checkout Page](docs/screenshots/checkout-page.png)
+
+* Once order submitted success message displayed with order summary, email order confirmation is also sent to user’s email address.
+
+
+![Order Confirmation Email](docs/screenshots/user-stories-email.png)
+
+* The page shows details of the products purchased along with the delivery information, order time, order number, order date and a link at the bottom taking the user back to the products page. 
+* Under the listed products is an Order Total, Delivery Charge (if applicable) and Grand total.
+
+![Order Success Page](docs/screenshots/user-stories-confirmation.png)
+
 ### Admin Product Management
-- [Add Product Form](static/images/screenshots/add-product-form.png)
-  - Add product form displayed to add a new item to the store
-- [Edit Product Form](static/images/screenshots/edit-product-form.png)
-  - Admin can also edit and delete existing products, every product displays edit/delete at bottom of item summary. Delete confirmation is also displayed to safeguard against accidental deletion
-- [Delete Confirmation](static/images/screenshots/delete-confirmation.png)
+
+* Admin have access to an additional menu selection ‘Product Management’.
+
+![Admin Menu](docs/screenshots/user-stories-admin-menu.png)
+
+* Here they can add a new product by completing the form.
+
+![Add Product Form](docs/screenshots/user-stories-admin-page.png)
+
+* Admin also have additional access to edit and delete products via links on the product cards on the main and product detail pages.
+
+![admin edit](docs/screenshots/user-stories-admin-edit.png)
+
 
 ### Allauth features
-The sign in, register, password reset, email confirmation pages etc, have all been provided by Django allauth and formatted to meet the needs of the site.
+
+* The sign in, register, password reset, email confirmation pages etc, have all been provided by Django allauth and formatted to meet the needs of the site.
+
 
 ---
+
 
 ### Future features
 * Adding stock management for the products.
