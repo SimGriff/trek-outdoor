@@ -1,5 +1,5 @@
 # Trek Outdoor
-![Screenshot of mockup](static/images/screenshots/mockup.png)
+![Screenshot of mockup](docs/screenshots/mockup.png)
 View the deployed site [here:](https://simgriff-trek-outdoor.herokuapp.com/)
 ## User Experience (UX)
 
@@ -160,7 +160,7 @@ Categories and sub-categories
 
 * The logged in user can add any item to their wishlist via the add to wishlist button within the product details page.
 
-![Add to wishlist button](docs/screenshots/user-stories-register-wishlist-btn.png)
+![Add to wishlist button](docs/screenshots/user-stories-wishlist-btn.png)
 
 * The page displays all products added to the users wishlist. Products are displayed in the same format as the main products page with the same functionality. 
 
@@ -357,7 +357,7 @@ The wireframes for the site were produced using [Balsamiq:](https://balsamiq.com
 
 Throughout the project I have been using DevTools on the Chrome browser to test changes to the HTML and CSS code. I have committed regularly and included detailed messages detailing the changes made.
 
-Every page was put through the W3C HTML Validation checker, one page failed, the shopping card page, where I was presented with duplicate id errors. I was unable to clear this error as it would have severely compromised the functionality of the site. With more time, I would have investigated the issue in more depth and sought a viable solution.
+Every page was put through the W3C HTML Validation checker, one page failed, the shopping cart page, where I was presented with duplicate id errors. I was unable to clear this error as it would have severely compromised the functionality of the site. With more time, I would have investigated the issue in more depth and sought a viable solution.
 
 ### W3C Markup Validator results:
 The Validator results from the [W3C Markup Validation Service](https://validator.w3.org/) showed no errors or warnings on the following pages except for the cart.html where I had Duplicate id errors. I was unable to clear this error as it would have severely compromised the functionality of the site.
@@ -691,7 +691,6 @@ I was stuck on this one for a while! I kep receiving an error in the terminal, �
 
 I realised ‘product’ not ‘products’ shown in my wishlist/models.py
 
-
 * Deployment Issues
 I was unable to deploy my project for quite some time, the browser was displaying an application error and would not launch my site. I had an H10 error in my terminal and had no clue what that was and had no luck researching the error code. After carrying out further research I came across this post by Ed B_alum on Slack;
 
@@ -700,13 +699,11 @@ I was unable to deploy my project for quite some time, the browser was displayin
 Then I realised that I had used my Heroku app in my Procfile instead of the folder name. Deployment was successful after this simple tweak.
 
 
-
 #### Unfixed Bugs
-* User can enter review’s indefinitely, I was unable to restrict reviews to one per user per product. With more time I would have investigated this further and sought a viable solution.
+* User can enter new review’s indefinitely, I was unable to restrict reviews to one per user per product. With more time I would have investigated this further and sought a viable solution.
 
 
 ---
-
 
 
 ## Deployment
@@ -736,13 +733,170 @@ The project was deployed to Heroku using the following steps:
 | MONGO_DBNAME  | Name of your database |
 
 
-
 * Hide Config Vars
 * Select ‘Deploy’, then GitHub, search and connect to your repository.
 * Select ‘Enable Automatic Deployment’ from the GitHub Master / Main branch
 * Click on ‘Open App’ to launch your App in a new Browser window.
+* Search for Heroku Postgres from the resources tab and add to your project
+* Ensure you have `dj_database_url ==0.5.0` and `psycopg2` installed. 
+```
+pip3 install dj_database_url ==0.5.0
+pip3 install psycopg2_binary
+```
+* Login to the Heroku CLI - `heroku login -i`
+* Run migrations on Heroku Postgres - `heroku run python manage.py migrate`
+* Create a superuser - `python manage.py createsuperuser`
+* Install `gunicorn` - `pip3 install gunicorn`
+* Create a requirements.txt file - `pip3 freeze > requirements.txt`
+* Create a `Procfile` and add this;
+```
+web: gunicorn trek-outdoor.wsgi:application
+```
+* Disable Heroku from collecting static files - `heroku config:set DISABLE_COLLECTSTATIC=1 --app <your-app-name>`
+* Add the hostname to project settings.py file
+```
+ALLOWED_HOSTS = ['<you-app-name>.herokuapp.com', 'localhost']
 
----
+```
+* Connect Heroku to you Github, by selecting Github as the deployment method and search for the github repository and pressing `connect`
+* In Heroku, in the settings, open config vars select `Reveal config vars` and add this;
+```
+AWS_ACCESS_KEY_ID =	<enter your variable here>
+AWS_SECRET_ACCESS_KEY =	<enter your variable here>
+DATABASE_URL =	<added by Heroku when Postgres installed>
+DISABLE_COLLECTSTATIC =	1 
+EMAIL_HOST_PASS = <enter your variable here>
+EMAIL_HOST_USER = <enter your variable here>
+SECRET_KEY = <enter your variable here>
+STRIPE_PUBLIC_KEY = <enter your variable here>
+STRIPE_SECRET_KEY = <enter your variable here>
+STRIPE_WH_SECRET = <enter your variable here>
+USE_AWS = True
+```
+* Go back to the Deploy tab and under Automatic deploys choose `Enable Automatic Deploys`
+* Back in your CLI add, commit and push your changes 
+```
+git add .
+git commit -m "Commit message"
+git push
+```
+* Your deployed site can now be launched at any time by clicking `Open App` from Heroku.
+
+**AWS S3 Bucket setup**
+* Go to Amazon Web Service website and create an AWS account
+* Search for S3 and create a new bucket, it's recommended to call it the same names as your heroku app name
+* Choose your region, select ACLS enabled and Bucket owner preferred
+* Allow public access to our static files
+* Select Create Bucket, and your bucket will be created
+* Select your new bucket;
+* Go to Properties Tab, then scroll down to the bottom until you find Static Website Hosting
+  - Click on Edit
+  - then Enable
+  - Hosting type: choose Host a Static Website
+  - index.html as index.html
+  - Error document: error.html
+  - Save changes 
+* Under Permissions,
+  - Scroll down and you will find Cross-origin resource sharing (CORS)
+  - Select Edit, then paste in the information below;
+
+```
+[
+  {
+      "AllowedHeaders": [
+          "Authorization"
+      ],
+      "AllowedMethods": [
+          "GET"
+      ],
+      "AllowedOrigins": [
+          "*"
+      ],
+      "ExposeHeaders": []
+  }
+]
+```
+* Continue under Permissions:
+    - Generate Bucket Policy and make note of Bucket ARN
+    - Chose S3 Bucket Policy as Type of Policy
+    - For Principal, enter;
+    ```
+    "Resource": "arn:aws:s3:::YOUR_BUCKET_NAME/*",  
+    ```
+    - Add Statement
+    - Generate Policy
+    - Copy Policy 
+    - Paste into the bucket policy editor
+    - Save changes
+* Under Access Control List (ACL):
+    - For Everyone (public access), tick List
+    - Accept that everyone in the world may access the Bucket
+    - Save changes
+    - While you are still in Permissions,go to Access Control List (ACL) section, click Edit and enable List for Everyone (public access), and accept the warning
+
+**AWS IAM (Identity and Access Management) setup**
+* Now we need to create a user to access the bucket through IAM - Identity and Access Management. 
+    - Go back to the service menu and open IAM.
+    - Create a new group
+    - Select Policy
+    - Create policy
+    - Under JSON tab, click Import managed policy
+    - Choose AmazongS3FullAccess policy
+    - Edit the resource to include the Bucket ARN noted earlier when creating the Bucket Policy
+    - Click next step
+    - Go to Review policy
+    - Give the policy a name and description of your choice
+    - Create policy
+* Go back to User Groups and choose the group created earlier
+    - Under Permissions, select Add permissions, choose Attach Policies and select the one just created
+    - Add permissions
+* Under Users:
+    - Choose a user name 
+    - Select Programmatic access as the Access type
+    - Click Next
+    - Add the user to the Group just created
+    - Click Next and Create User
+* Download the `.csv` containing the access key and secret access key, the file is only available once and cannot be downloaded again.
+
+* Connect Django to AWS Bucket
+   - Install boto3 and django-storages
+```
+pip3 install boto3
+pip3 install django-storages
+pip3 freeze > requirements.txt
+```
+   - Add storages to the Installed Apps in settings.py
+   - In settings.py, set cache control, set bucket configurations, set static and media files location
+   - Override static and media URLs in production. 
+
+* Set the Config Vars in Heroku. Go to Heroku, Settings and select Reveal Convig Vars. Set these variables:
+
+   Variables | Value
+   --- | ---
+   AWS_ACCESS_KEY_ID | your access key id from the csv file that you downloaded earlier
+   AWS_SECRET_ACCESS_KEY | your secret access key from the csv file that you downloaded earlier
+   USE_AWS | True    
+
+   Then remove the COLLECTSTATIC variable from the Config Vars.   
+* Create a custom_storages.py file in your  root directory. Inside this include the Static and Media Storage locations: 
+   ```
+   from django.conf import settings
+   from storages.backends.s3boto3 import S3Boto3Storage
+ 
+
+   class StaticStorage(S3Boto3Storage):
+      location = settings.STATICFILES_LOCATION
+
+
+   class MediaStorage(S3Boto3Storage):
+      location = settings.MEDIAFILES_LOCATION
+   ```  
+* The final step is to push your changes to Github
+  ```
+  git add .
+  git commit -m "Commit message"
+  git push
+  ```  
 
 ## Credits
 
@@ -789,7 +943,7 @@ To produce mockup image across multiple devices.
 
 ### Acknowledgements 
 * Thanks to my mentor Rohit Sharma for his helpful feedback during this project.
-* My friends and family for their continuing support during this course and helping me test the app.
+* My friends and family for their continuing support during this course and helping me test the site.
 * The Code Institute tutors who have responded quickly to my queries and added to my understanding of the subject.
 
 ---
