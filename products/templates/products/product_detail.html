@@ -168,8 +168,8 @@
                     <div class="modal fade text-center" id="deleteReview{{ review.id }}Modal" tabindex="-1" role="dialog" aria-labelledby="deleteReview{{ review.id }}Modal" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content text-center"> 
-                                <div class="modal-header text-center">
-                                <h5 class="modal-title" id="deleteReview{{ review.id }}ModalLabel">Delete Review</h5>
+                                <div class="modal-header">
+                                <h5 class="col-12 modal-title text-center" id="deleteReview{{ review.id }}ModalLabel">Delete Review</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
@@ -177,7 +177,7 @@
                                 <div class="modal-body text-center">
                                     <h6>Please Confirm Deletion</h6>
                                 </div>
-                                <div class="modal-footer text-center">
+                                <div class="modal-footer mx-auto">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="cancel">
                                     Cancel</button>
                                 <a href="{% url 'delete_review' product.id review.id %}" class="btn btn-danger" id="deleteReview{{ review.id }}">

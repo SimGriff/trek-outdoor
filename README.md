@@ -137,16 +137,15 @@ Categories and sub-categories
 
 ![Edit Review Buttons](docs/screenshots/edit-review-btn.png)
 
+* Add/Edit Review Page
 
-  - Edit – User is taken to the Edit Review form and asked to confirm any changes.
+  - Edit – User is taken to the Edit Review form and asked to confirm any changes, they layout of the add rfeview form is identical.
 
 ![Edit Review Form](docs/screenshots/edit-review-form.png)
 
   - Delete – Once selected, a Delete confirmation modal is displayed to safeguard against accidental deletion.
   - If the user has not added a review yet, the Add Review button is displayed and the user is taken to the Add Review Form.
 * Add/Edit Review Page 
-- [Add Review Form](static/images/screenshots/add-review-form.png)
-- [Edit Review Form](static/images/screenshots/edit-review-form.png)
 
 ### Wishlist
 - [Wishlist Page](static/images/screenshots/wishlist-page.png)
